@@ -5,19 +5,17 @@ class Stack
         @tail = nil
         self
     end
-
     def push val
         @head = Item.new val, @head
-        @tail = @head if @tail == nil
+        @tail = @head unless @tail
         self
     end
-
     def pop
+        return nil if @head == nil
         out = @head.val
         @head = @head.next
         out
     end
-
     def data_store
         n = @head
         while n.class == Item
@@ -25,12 +23,11 @@ class Stack
             n = n.next
         end
     end
-    def last
-        @tail
+    def back
+        return 0 unless @tail
+        @tail.val
     end
 end
-
-
 
 class Item
     attr_accessor :val, :next
