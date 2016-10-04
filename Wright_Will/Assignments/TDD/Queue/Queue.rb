@@ -49,3 +49,4 @@ puts que.pop
 que.push(4)
 puts que.pop
 que.data_store
+#still need to add max and min... will come back to this
