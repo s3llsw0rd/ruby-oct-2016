@@ -1,0 +1,11 @@
+rails new dojo_ninjas
+# add "hirb" to gemfile
+cd dojo_ninjas
+bundle
+rails g model Dojo name:string city:string state:string
+rake db:migrate
+rails g model Ninja first_name:string last_name:string dojo:references
+rake db:migrate
+rails c
+# add validation to model
+    validates :name :city
