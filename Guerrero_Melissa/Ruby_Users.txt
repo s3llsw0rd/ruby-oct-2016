@@ -1,0 +1,37 @@
+rails new user_login_project
+
+cd user_login_project
+
+gem install hirb
+
+rails g model User first_name:string last_name:string email_address:string age:integer
+
+rake db:migrate
+
+rails c
+
+had to manually enter new users because User.create didn't work no matter which way I tried :(
+	user1 = User.new
+	user1[:first_name] = "Violet" etc.
+	user1.save
+
+User.all brought back the users I had created
+
+Had trouble with Hirb.enable...Ken helped with vim Gemfile, bundle, then back to rails c
+
+created a validations list in user.rb
+tested it with a user = User.new()
+then ran user.save which returned false
+then ran user.errors.full_mesages to see why it had returned false
+
+To retrieve all users type User.all
+To retrieve first user type User.first
+To retrieve last user type User.last
+
+To get users sorted by their first name, type User.order(:first_name)
+
+To get the record of the user whose id is 3, and update the person's last
+name to something else, type
+User.update(3, last_name: "Pumpkin")
+
+To destroy a record of a user with id 4, type User.find(4).destroy
