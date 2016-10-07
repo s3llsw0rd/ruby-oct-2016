@@ -1,0 +1,113 @@
+#blogs_posts_messages_1 
+
+#Start a new project and create the models for the ERD below. This is an application that allows people to create blogs, write posts for each blog, and leave messages for a post.
+
+	rails new blogs_posts_messages_1
+	cd blogs_posts_messages_1
+	sublime .
+	#in gemfile: gem 'hirb'
+	bundle install
+
+#Create the migration files as well as the models for the application above.
+
+	rails g model Blog name:string description:text
+	rails g model Post blog:references title:string content:text
+	rails g model Message post:references author:string message:text
+
+	rake db:migrate
+
+	#in blog.rb file:
+		class Blog < ActiveRecord::Base
+			has_many :posts, dependent: :destroy
+			has_many :messages, through: :posts
+		end
+
+	#in post.rb file:
+		class Post < ActiveRecord::Base
+		  belongs_to :blog
+		  has_many :messages, dependent: :destroy
+		end
+
+	#in message.rb file:
+		class Message < ActiveRecord::Base
+		  belongs_to :post
+		end
+
+
+
+#Implement the following validations:
+
+	#require the presence of name and description for the blog.
+
+		validates :name, :description, presence: true
+
+	#require the presence of title and content for the posts, require the title to be at least 7 characters long.
+
+		 validates :title, :content, presence: true
+		 validates :title, length: { minimum: 7 }
+
+
+	#require author and message for the messages. Require the message to be at least 15 characters long.
+
+		  validates :author, :message, presence: true
+		  validates :message, length: { minimum: 15 }
+
+
+
+#Using the console:
+
+	#create 5 new blogs.
+
+		for i in 1..5
+			Blog.create(name:"blog#{i}", description:"blog_desc#{i}")
+		end
+
+	#create several posts for each blog.
+
+		for i in 1..5
+			for j in 1..3
+				Post.create(blog:Blog.find(i), title:"title--#{i}--#{j}", content:"content--#{i}--#{j}")
+			end
+		end
+
+
+	#create several messages for the first post.
+
+		for i in 1..3
+			Message.create(post:Post.first,author:"author #{i}",message:"123456789101112131415 -- #{i}")
+		end
+
+
+	#know how to retrieve all posts for the first blog.
+
+		Blog.first.posts
+		Blog.first.messages
+
+
+	#know how to retrieve all posts for the last blog (sorted by title in the DESC order).
+
+		Blog.last.posts.order(title: :desc)
+
+	#know how to update the first post's title.
+
+		Post.first.update(title:"This is a new title")
+
+	#know how to delete the third post (have the model automatically delete all messages associated with the third post when you delete the third post).
+
+		Post.find(3).destroy
+		Post.order(:id).limit(1).offset(2).destroy
+
+		#in the post.rb model, include this line
+			has_many :messages, dependent: :destroy
+
+	#know how to retrieve all blogs.
+
+		Blog.all
+
+	#know how to retrieve all blogs whose id is less than 5.
+
+		Blog.where(id: 1...5)
+
+	#think of other potential information you may need for this application and get comfortable being able to pull information using the console.
+
+		okay
