@@ -1,0 +1,49 @@
+rails new user_login_project
+
+rails g model User first_name:string last_name:string email_address:string age:integer
+rails c
+Hirb.enable
+user1 = User.new
+user2 = User.new
+user3 = User.new
+user1.save
+user2.save
+user3.save
+user1.valid? true
+user2.valid? true
+user3.valid? true 
+user1.new_record? false
+user2.new_record? false
+user3.new_record? false
+
+validations:
+	validates :first_name, :last_name, :email_address, :age, presence: true
+	validates :age, numericality: true
+	validates :first_name, :last_name, length: { minimum: 2 }
+	validates_numericality_of :age, greater_than: 10, less_than: 150
+user1 = User.new
+user1.valid? false
+user1.errors.full_messages
+
+user1 = User.new(first_name:"ken",last_name:"nguyen",email_address:"ken@koolio.com", age:5)
+user1.valid? false
+user1.errors.full_messages ("Age must be greater than 10")
+
+user1 = User.new(first_name:"ken",last_name:"nguyen",email_address:"ken@koolio.com", age:160)
+user1.valid? false
+user1.errors.full_messages ("Age must be less than 150")
+
+user1 = User.new(first_name:"ken",last_name:"nguyen",email_address:"ken@koolio.com", age:"ken")
+user1.valid? false
+user1.errors.full_messages ("Age is not a number", "Age is not a number")
+
+-----------------
+
+User.all
+User.first
+User.last
+User.order(first_name: :desc)
+User.find(4).update(last_name:"Zoologist")
+User.find(4).save ----> true
+User.find(3).destroy
+User.all -----> success!
