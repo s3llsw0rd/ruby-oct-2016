@@ -1,0 +1,125 @@
+#polymorphism assignment -- building from blogs_posts_messages_2
+
+#make a new model "comment" and make it polymorphic "commentable"
+
+	rails g model Comment user:references comment:text commentable:references{polymorphic}
+
+	#comment.rb model
+		class Comment < ActiveRecord::Base
+		  belongs_to :user
+		  belongs_to :commentable, polymorphic: true
+
+		  validates :comment, presence: true
+		end
+
+	#user.rb model
+	class User < ActiveRecord::Base
+		has_many :posts, dependent: :destroy
+		has_many :owners, dependent: :destroy
+		has_many :messages, dependent: :destroy
+		has_many :blogs, through: :owners
+		#has_many :messages, through: :posts can't have messages twice..
+	    has_many :post_messages, through: :posts, source: :messages
+
+	    has_many :comments, as: :commentable, dependent: :destroy
+	   
+
+	    ### has_many :comments_outgoing, as: :commentable, source: :comments
+
+	    ### has_many :comments_outgoing, through: :comments, source: :commentable, source_type: :User
+
+	    //** not yet working **//
+
+		validates :first_name, :last_name, :email_address, presence: true, length: { minimum: 2 }
+	end
+
+	#post.rb model
+	class Post < ActiveRecord::Base
+	  belongs_to :blog
+	  belongs_to :user
+	  has_many :messages
+
+	  has_many :comments, as: :commentable, dependent: :destroy
+
+	  validates :title, :content, presence: true
+	end
+
+	#message.rb model
+	class Message < ActiveRecord::Base
+	  belongs_to :post
+	  belongs_to :user
+
+	  has_many :comments, as: :commentable, dependent: :destroy
+
+	  validates :author, :message, presence: true
+	end
+
+	#blog.rb model
+	class Blog < ActiveRecord::Base
+		has_many :owners, dependent: :destroy
+		has_many :posts, dependent: :destroy
+		
+		has_many :users, through: :owners
+		has_many :messages, through: :posts
+
+	    has_many :comments, as: :commentable, dependent: :destroy
+
+		validates :name, :description, presence: true
+	end
+
+
+
+#### testing polymorphism -- add, update, delete comments for a user, blog, post, and a message. 
+
+	##added a comment from user 1 to user 5 -- commentable_type == User, commentable_id == 5
+
+		Comment.create(user:User.first, comment:"First comment from user1 to user 5", commentable:User.find(5))
+
+	##update comment from user 1 to user 5 -- changed comment text and comment receiver from user 5 to user 3
+
+		Comment.update(Comment.first.id, comment:"updated this comment", commentable:User.find(3))
+
+	##delete this comment
+		Comment.first.destroy
+
+	------
+
+	##add a comment from user 2 to blog 4
+
+		Comment.create(user:User.second, comment:"Second comment, to a blog this time", commentable:Blog.find(4))
+
+	##update comment text
+
+		Comment.update(Comment.first.id, comment:"Updated second comment to ponies and ho-hos")
+
+	##delete this comment
+
+		Comment.first.destroy
+
+	------
+
+	##add a comment from user 4 to post 7
+
+		Comment.create(user:User.find(4), comment:"Comment from user 4 to post 7", commentable:Post.find(7))
+
+	##update comment text
+
+		Comment.find(3).update(comment:"update this here comment to something useless")
+
+	##destroy comment
+
+		Comment.first.destroy
+
+	------
+
+	##add a comment from user 5 to message 8
+
+		Comment.create(user:User.find(5), comment:"Comment from user 5 to message 8", commentable:Message.find(8))
+
+	##update comment text
+
+		Comment.find(4).update(comment:"Pineapples and macbook pros")
+
+	##detroy comment
+
+		Comment.find(4).destroy
