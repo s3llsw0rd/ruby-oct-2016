@@ -1,0 +1,55 @@
+rails new new_dojo_ninjas
+
+cd new_dojo_ninjas
+
+rails g model Dojo name: string city: string state: string
+
+rake db:migrate
+
+rails g model Ninja first_name: string last_name: string
+
+rake db:migrate
+
+rails c
+
+Dojo.create to create the given CodingDojos
+
+put validations in models
+
+link dojo.rb and ninja.rb using has_one and has_many
+
+destroy the Dojos using Dojo.find(1).destroy etc
+
+Using .new is problematic because validations are automatically run only on .create or .save
+
+Had to reload! for validation errors to show up.
+
+Created 3 new legit Dojos in Portland, Dallas and Seattle
+
+rails g migration AddNinjaToDojos ninja:references
+
+rails db:migrate
+
+rails c
+
+ran Ninja.create(dojo: Dojo.first, first_name: "whatever", last_name: "whatever") three times to put three ninjas in the first Dojo ID in the table...this did not work for .second though
+
+ninja2 = Ninja.create(dojo: Dojo.second, first_name: "Annie", last_name: "Guerrero") worked to add 3 ninjas to the second dojo
+
+ninja8 = Ninja.create(dojo: Dojo.third) etc for adding to third dojo
+
+ninjas = Ninja.where(dojo: Dojo.first) will select all the ninjas from the first dojo. Put Dojo.second or Dojo.thrid for the other ones.
+
+ninjas = Ninja.where(dojo: Dojo.second).order(created_at: :desc) will return all of the ninjas at the second dojo in order of created_at desc order...not sure if you want just the first_name where that would go.
+
+To delete the second dojo including all of the ninjas, would use dependent: :destroy on the dojo.rb has_many :ninjas line
+
+
+
+
+
+
+
+
+
+
