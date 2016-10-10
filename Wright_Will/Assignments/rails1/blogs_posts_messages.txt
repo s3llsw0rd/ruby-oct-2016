@@ -1,0 +1,62 @@
+#
+rails new blogs_posts_messages
+cd blogs_postsmessages
+# add hirb
+bundle
+rails g model Blog name:string description:string
+rake db:migrate
+rails g model Post title:string content:string blog:references
+rake db:migrate
+rails g model Message author:string message:string post:references
+rake db:migrate
+
+# add validations
+    #blog
+validates: :name, :description, presence: true
+    #post
+validates: :title, :content, presence: true
+validates: :title, length: { minimum: 7 }
+
+    #message
+validates: :author, :message, presence: true
+validates: :title, length: { minimum: 15 }
+
+rails c
+Blog.create(description:'f',name:'f')
+Blog.create(description:'g',name:'g')
+Blog.create(description:'h',name:'h')
+Blog.create(description:'j',name:'j')
+Blog.create(description:'k',name:'k')
+Blog.create(description:'l',name:'l')
+
+n = Post.new(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(1)).valid?
+
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(1))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(1))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(1))
+
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(2))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(2))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(2))
+
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(3))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(3))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(3))
+
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(4))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(4))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(4))
+
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(5))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(5))
+Post.create(title:'lkkkkkkkk',content:'dsdsalkdfkljds;ldsallssda', blog:Blog.find(5))
+
+
+Message.create(author:'fred',message:'12345678901234567', post:Post.first)
+Message.create(author:'fred',message:'12345678901234567', post:Post.first)
+Message.create(author:'fred',message:'12345678901234567', post:Post.first)
+Message.create(author:'fred',message:'12345678901234567', post:Post.first)
+Message.create(author:'fred',message:'12345678901234567', post:Post.first)
+Message.create(author:'fred',message:'12345678901234567', post:Post.first)
+Message.create(author:'fred',message:'12345678901234567', post:Post.first)
+Message.create(author:'fred',message:'12345678901234567', post:Post.first)

@@ -1,0 +1,19 @@
+rails new user_login_project
+	added Hirb to gem
+bundle
+rails g model User first_name:string last_name:string email_address:string age:integer
+rake db:migrate
+rails c
+User.create first_name:"frank", last_name:"markus", email_address:"f@f.f", age:111
+User.create first_name:"bob", last_name:"smith", email_address:"b@b.b", age:5
+User.create first_name:"mark", last_name:"dean", email_address:"m@m.m", age:29
+User.create first_name:"jeb", last_name:"meetchum", email_address:"j@j.j", age:52
+Hirb.enable
+
+User.all
+User.first
+User.last
+User.order first_name: :desc
+User.update 3, last_name:"wilburforce"
+User.find(2).update last_name:"smithy"
+User.find(4).destroy
