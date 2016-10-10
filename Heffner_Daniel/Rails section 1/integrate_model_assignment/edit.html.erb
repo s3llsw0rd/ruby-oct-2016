@@ -1,0 +1,8 @@
+<h1>Edit a user</h1>
+<p>Sure, edit, go ahead. This form doesn't actually do anything.</p>
+<form>
+	<label>Alias: <input type="text" value="<%= @edituser.alias %>"></label>
+	<label>Reputation: <input type="number" value="<%= @edituser.reputation %>"></label>
+	<label>Role: <input type="text" value="<%= @edituser.role %>"></label>
+</form>
+<a href="/users">Go Home, You Can't Change Anything Yet</a>
