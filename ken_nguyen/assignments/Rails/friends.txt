@@ -1,0 +1,43 @@
+#friends assignment
+
+rails new friends
+
+rails g model User first_name:string last_name:string
+
+rails g model Friendship user:references friend:references
+
+##on the user model
+	class User < ActiveRecord::Base
+		has_many :friendships
+		has_many :friends, through: :friendships
+	end
+
+##on the friendship model
+	class Friendship < ActiveRecord::Base
+	  belongs_to :user
+	  belongs_to :friend, class_name: "User"  ## <-- this line is important, the :friend object would not exist otherwise
+
+	  	###here we created an object :friend by declaring that it is from the class "User", which the friendship table will reference to. The User table will have many :friends (through :friendships). Friendship.user_id = User.id , Friendship.friend_id = User.id (because it is of the class "User")
+	end
+
+rake db:migrate
+
+rails c
+
+User.create(first_name:"Ken", last_name:"Nguyen")
+User.create(first_name:"House", last_name:"Of Cards")
+User.create(first_name:"Kermit", last_name:"Frog")
+User.create(first_name:"Alien", last_name:"Ware")
+
+Friendship.create(user:User.first, friend:User.second)
+ #user 1 is now friends with user 2
+ #but this does not make user 2 friends with user 1 -- does not reciprocates the realtionship 
+
+User.first.friends --> works!
+
+question 3:
+
+userfriends = User.first.friends
+userfriendsid = [User.first.id]
+userfriends.each { |friend| userfriendsid << friend.id }
+User.where.not(id: userfriendsid)
