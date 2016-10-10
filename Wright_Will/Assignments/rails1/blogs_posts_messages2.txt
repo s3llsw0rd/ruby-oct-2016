@@ -1,0 +1,31 @@
+# add users table
+    first_name:string
+    last_name:string
+    email_address:string
+    has_many:messages
+    has_many:posts
+    has_many:blogs through owners ????
+
+
+# add to messages table
+    belongs_to:user
+
+# add to posts
+    belongs_to:user
+
+# add to blogs
+    belongs_to:owner
+
+rails g model User first_name:string last_name:string email_address:string
+
+rails g model Owner user:references blog:references
+
+
+
+User.create first_name:"frank"
+User.create first_name:"Bob"
+User.create first_name:"Tim"
+User.create first_name:"Tom"
+User.create first_name:"mark"
+
+blog.create *5
