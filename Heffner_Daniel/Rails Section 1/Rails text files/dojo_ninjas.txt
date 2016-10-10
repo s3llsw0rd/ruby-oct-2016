@@ -1,0 +1,42 @@
+rails new dojo_ninjas
+rails g model Dojo name:string city:string state:string
+rails g model Ninja first_name:string last_name:string dojo:references
+rake db:create
+rake db:migrate
+rails c
+Dojo.create(name:"", city:"Salt Lake City", state:"NV")
+Dojo.create(name:"demo1", city:"", state:"")
+Dojo.create(name:"demo2", city:"", state:"XX")
+
+# write validations
+
+reload!
+Dojo.destroy_all
+dojo1 = Dojo.new(name:"CodingDojo Silicon Valley", city:"Mountain View", state:"CA")
+dojo2 = Dojo.new(name:"CodingDojo Seattle", city:"Seattle", state:"WA")
+dojo3 = Dojo.new(name:"CodingDojo New York", city:"New York", state:"NY")
+dojo1.save
+dojo2.save
+dojo3.save
+Dojo.create().errors
+Dojo.create(name:"x", city:"x", state:"Texas").errors
+
+for i in 0...3
+  Ninja.create(first_name:"ninja", last_name:"#"+i.to_s+i.to_s+i.to_s, dojo: Dojo.first)
+end
+for i in 0...3
+  Ninja.create(first_name:"turtle", last_name:"#"+i.to_s+i.to_s+i.to_s, dojo: Dojo.find(5))
+end
+for i in 0...3
+  Ninja.create(first_name:"pirate", last_name:"#"+i.to_s+i.to_s+i.to_s, dojo: Dojo.last)
+end
+
+Dojo.first.ninjas.all
+Dojo.find(5).ninjas.all
+Dojo.last.ninjas.all
+
+Ninja.where(dojo: Dojo.find(5)).order(created_at: :desc)
+
+# add "dependent: :destroy" to dojo.rb
+
+Dojo.find(5).destroy
