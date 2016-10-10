@@ -1,0 +1,94 @@
+rails new blog_post_message
+cd blog_post_message
+
+# add Hirb
+
+rails g model User first_name:string last_name:string email_address:string
+rails g model Blog name:string description:text
+rails g model Owner user:references blog:references
+rails g model Post title:string content:text blog:references user:references
+rails g model Message author:string message:text post:references user:references
+rake db:migrate
+
+# write validations
+
+rails c
+Hirb.enable
+
+for i in 1..5
+	User.create(first_name:"User", last_name:"#"+i.to_s, email_address:"user"+i.to_s+"@blog.com")
+end
+
+for i in 1..5
+	Blog.create(name:"Blog #"+i.to_s, description:"description for blog #"+i.to_s)
+end
+
+for i in 1..3
+	Owner.create(user:User.first, blog:Blog.find(i))
+end
+
+Owner.create(user:User.find(2), blog:Blog.find(4))
+Owner.create(user:User.last, blog:Blog.find(5))
+
+for i in 1..5
+	Owner.create(user:User.find(3), blog:Blog.find(i))
+end
+
+for i in 1..3
+	Post.create(user:User.first, blog:Blog.find(2), title:"Post #"+i.to_s, content:i.to_s+" much many content, wow look at the contents")
+end
+for i in 1..5
+	Post.create(user:User.find(2), blog:Blog.last, title:"Post #"+i.to_s, content:i.to_s+" much many content, wow look at the contents")
+end
+
+for i in 1..5
+	Post.create(user:User.find(3), blog:Blog.find(rand(1..5)), title:"Random #"+i.to_s, content:rand(1..5).to_s+" much many content, wow look at the contents")
+end
+
+for i in 1..2
+	Message.create(user:User.find(3), post:Post.first, author:User.find(3).full_name, message:rand(100..500).to_s+" much many message, wow look at the message")
+end
+for i in 1..3
+	Message.create(user:User.find(3), post:Post.find(2), author:User.find(3).full_name, message:rand(100..500).to_s+" much many message, wow look at the message")
+end
+for i in 1..3
+	Message.create(user:User.find(4), post:Post.last, author:User.find(4).full_name, message:rand(100..500).to_s+" message message message wowwwwwww")
+end
+
+Post.find(2).update(user:User.last)
+Post.find(2).update(content:"all your content are belong to User.last")
+
+User.find(3).blogs
+User.find(3).posts
+User.find(3).messages
+
+Post.create(user:User.find(1), blog:Blog.first, title:"Posty McPosterson", content:"This is a post")
+Post.create(user:User.find(3), blog:Blog.first, title:"Posty McPosterson", content:"This is a post")
+
+Post.select('posts.id, posts.title, posts.content, users.id as user_id, users.first_name, users.last_name, users.email_address').joins(:user).where(blog: Blog.first)
+
+Post.select('messages.*, users.*').joins(:messages).joins(:user).where(blog: Blog.first)
+
+Blog.first.owners.select('*').joins(:user)
+
+Owner.where(user:User.first, blog:Blog.first).destroy_all
+
+####### polymorphism
+
+rails g model Comment comment:string user:references commentable:references{polymorphic}:index
+
+for i in 1..10
+	Comment.create(comment:"commenting "+rand(100-999).to_s+" wooo", user:User.find(rand(1..5)), commentable:Message.find(rand(1..5)))
+	Comment.create(comment:"commenting "+rand(100-999).to_s+" wooo", user:User.find(rand(1..5)), commentable:Post.find(rand(1..15)))
+	Comment.create(comment:"commenting "+rand(100-999).to_s+" wooo", user:User.find(rand(1..5)), commentable:Blog.find(rand(1..5)))
+	Comment.create(comment:"commenting "+rand(100-999).to_s+" wooo", user:User.find(rand(1..5)), commentable:User.find(rand(1..5)))
+end
+
+for i in 1..5
+	Comment.destroy(rand(1..41))
+end
+
+for i in 1..5
+	Comment.find(rand(1..41)).update(comment:"Updated Comment")
+end
+

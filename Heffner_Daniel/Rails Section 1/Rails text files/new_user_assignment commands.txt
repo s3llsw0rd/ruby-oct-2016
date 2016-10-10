@@ -1,0 +1,34 @@
+rails new user_login_project
+
+# add gem 'hirb' to Gemfile
+
+bundle install
+rails g model User first_name:string last_name:string email_address:string age:integer
+rake db:migrate
+rails c
+Hirb.enable
+User.create(first_name:"Harry", last_name:"Potter", email_address:"boywholived@hogwarts.wiz", age:15)
+newuser = User.new(first_name:"Draco", last_name:"Malfoy", email_address:"definitelynotevil@hogwarts.wiz", age:16)
+newuser.new_record?
+newuser.valid?
+newuser.save
+
+# adding validations...
+class User < ActiveRecord::Base
+	validates :first_name, :last_name, :email_address, :age, presence: true
+	validates :age, numericality: { greater_than_or_equal_to: 10, less_than: 150 } 
+	validates :first_name, :last_name, length: { minimum: 2 }
+end
+
+User.create(first_name:"x", last_name:"x", email_address:"", age:8).errors.full_messages
+# returned error messages: ["Email address can't be blank", "Age must be greater than or equal to 10", "First name is too short (minimum is 2 characters)", "Last name is too short (minimum is 2 characters)"]
+User.all
+User.first
+User.last
+User.order(first_name: :desc)
+
+# Creating a user so that I have a user with id of 3
+User.create(first_name:"Sirius", last_name:"Black", email_address:"freeeeedom@azkaban.wiz", age:42)
+
+User.find(3).update(last_name: "Incognito")
+User.find(3).destroy
