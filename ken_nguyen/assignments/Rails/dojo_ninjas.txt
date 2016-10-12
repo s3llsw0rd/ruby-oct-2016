@@ -1,0 +1,83 @@
+#dojo ninjas
+
+rails new dojo_ninjas
+cd dojo_ninjas
+
+gem "hirb"
+bundle install
+
+rails g model Dojo name:string city:string state:string
+rails g model Ninja dojo:references first_name:string last_name:string
+
+rake db:migrate
+
+(in dojo.rb)
+has_many :ninjas, dependent: :destroy
+
+rails c #enter the dragon
+
+Dojo.create(name:"CodingDojo Silicon Valley", city:"Mountain View", state:"CA")
+Dojo.create(name:"CodingDojo Seattle", city:"Seattle", state:"WA")
+Dojo.create(name:"CodingDojo New York", city:"New York", state:"NY")
+
+#add validations in models
+
+ #Dojo
+	validates :name, :city, :state, presence: true
+	validates :state, length: { is: 2 }
+
+ #Ninja
+   validates :first_name, :last_name, presence: true
+
+
+ #console
+ 	reload!
+
+Dojo.destroy_all
+
+dojo1 = Dojo.new
+dojo2 = Dojo.new
+dojo3 = Dojo.new
+
+dojo1.valid? => false
+dojo1.errors.full_messages => [ "Name can't be blank", "City can't be blank", "State can't be blank", "State is the wrong length (should be 2 characters)" ] 
+ #rinse and repeat
+
+
+dojo1 = Dojo.new(name:"Coding Dojo Dallas", city:"Dallas", state:"TX")
+dojo2 = Dojo.new(name:"Coding Dojo Seattle", city:"Seattle", state:"WA")
+dojo3 = Dojo.new(name:"Coding Dojo San Jose", city:"San Jose", state:"CA")
+
+dojo1.valid? => true
+dojo1.save
+ #rinse and repeat
+
+ #create 3 ninjas that belong to the first dojo
+ 	Ninja.create(dojo:Dojo.first, first_name:"Juan",last_name:"Dos")
+ 	Ninja.create(dojo:Dojo.first, first_name:"Tres",last_name:"Quatro")
+	Ninja.create(dojo:Dojo.first, first_name:"Cinco",last_name:"Seis")
+
+ #create 3 ninjas that belong to the second dojo
+  	Ninja.create(dojo:Dojo.second, first_name:"aa",last_name:"aa")
+ 	Ninja.create(dojo:Dojo.second, first_name:"bb",last_name:"bb")
+	Ninja.create(dojo:Dojo.second, first_name:"cc",last_name:"cc")
+
+ #create 3 more ninjas that belong to the first dojo
+  	Ninja.create(dojo:Dojo.last, first_name:"11",last_name:"11")
+ 	Ninja.create(dojo:Dojo.last, first_name:"22",last_name:"22")
+	Ninja.create(dojo:Dojo.last, first_name:"33",last_name:"33")
+
+#get all of the ninjas for any dojo 
+	Dojo.first.ninjas
+	Dojo.second.ninjas
+	Dojo.last.ninjas
+
+#How would you only retrieve the first_names of the ninjas that belong to the second dojo and order the result by created_at DESC order?
+
+	Dojo.second.ninjas.order(created_at: :desc).pluck(:first_name)
+
+#Delete the second dojo. How could you adjust your model so that it automatically removes all of the ninjas associated with that dojo?
+
+	Dojo.second.destroy 
+
+	#in the dojo model, after the "has_many :ninjas" add ", dependent: :destroy"
