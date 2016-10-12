@@ -11,8 +11,8 @@ class Dragon < Mammal
     self
   end
 
-  def attack_town
-    @health -=50
+  def attack_town(num = 1)
+    num.times{ @health -=50 }
     self
   end
 
@@ -31,4 +31,4 @@ end
 smaug=Dragon.new
 # smaug.display_health.fly.display_health
 # smaug.display_health.attack_town.display_health.eat_humans
-smaug.attack_town.attack_town.attack_town.eat_humans.eat_humans.fly.fly.display_health
+smaug.attack_town(10).eat_humans.eat_humans.fly.fly.display_health
