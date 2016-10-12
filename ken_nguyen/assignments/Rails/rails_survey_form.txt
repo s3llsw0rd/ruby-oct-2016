@@ -1,0 +1,123 @@
+#rails survey form assignment
+
+rails new rails_survey_form
+cd rails_survey_form
+vim Gemfile
+	#gem 'rails-footnotes', '>=4.0.0', '<5'
+	 gem 'hirb'
+bundle install
+rails generate rails_footnotes:install
+rails g model Survey name:string location:string language:string comment:text
+rails g controller Surveys index result
+rake db:migrate
+
+
+
+## routes.rb
+	Rails.application.routes.draw do
+	  root 'surveys#index'
+	  get '/survey' => 'survey#index'
+	  post '/surveys/create' => 'surveys#create'
+	  get '/surveys/create' => 'survey#index'
+	  get '/result/:id' => 'surveys#result', as: :result
+
+	end
+
+
+## surveys_controller.rb
+	class SurveysController < ApplicationController
+	  before_action :get_user, only: [:result]
+
+	  def index
+	  end
+
+	  def create
+	  	user = Survey.new(survey_params)
+	  	if user.save
+	  		redirect_to result_path(user)
+	    else
+	    	render :action => 'index'
+	    end
+	  end
+
+	  def result
+	  	session[:count] || session[:count] = 0
+	  	session[:count] += 1
+	  	flash[:message] = "Thanks for submitting this form! You have submitted this form #{session[:count]} times now."
+	  end
+
+	  private
+	  	  def get_user
+	  	  	@user = Survey.find(params[:id])
+	  	  end
+		  def survey_params
+		  	params.require(:survey).permit(:name, :location, :language, :comment)
+		  end
+	end
+
+
+## index.html.erb
+	<h1>The Grand Old Dojo Survey</h1>
+	<form action='/surveys/create' method='POST'>
+		<% if @user %>
+			<% if @user.errors.any? %>
+			  <div id='errors_explanation'>
+			  	<ul>
+				  <% @user.errors.full_messages.each do |msg| %>
+				  	<li><%= msg %></li>
+				  <% end %>
+				</ul>
+			  </div>
+			<% end %>
+		<% end %>
+
+		<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
+		<label for='name'>Your Name: </label>
+		<input type='text' name='survey[name]' id='name'>
+		<label for='location'>Dojo Location: </label>
+		<select name='survey[location]' id='location'>
+			<option value='Silicon Valley'>Silicon Valley</option>
+			<option value='Seattle'>Seattle</option>
+			<option value='Los Angeles'>Los Angeles</option>
+			<option value='Dallas'>Dallas</option>
+			<option value='Washington, D.C'>Washington, D.C</option>
+			<option value='Chicago'>Chicago</option>
+		</select>
+		<label for='language'>Favorite Language: </label>
+		<select name='survey[language]' id='language'>
+			<option value='Java'>Java</option>
+			<option value='JavaScript'>JavaScript</option>
+			<option value='C'>C</option>
+			<option value='C++'>C++</option>
+			<option value='C#'>C#</option>
+			<option value='Python'>Python</option>
+			<option value='Ruby'>Ruby</option>
+			<option value='HTML'>HTML</option>
+		</select>
+		<label for='comment'>Comment (optional): </label>
+		<textarea name='survey[comment]' id='comment'></textarea>
+		<input type='submit' value='submit'>
+	</form>
+
+
+## result.html.erb
+	<% if flash[:message] %>
+		<div id='flash'>
+			<p><%= flash[:message] %></p>
+		</div>
+	<% end %>
+
+	<h1>Submitted Information</h1>
+	<div>
+		<p>Name: <%= @user.name %></p>
+		<p>Dojo Location: <%= @user.location %></p>
+		<p>Favorite Language:  <%= @user.language %></p>
+		<p>Comment: <%= @user.comment %></p>
+	</div>
+	<%= link_to 'Back', root_path %>
+
+
+## survey.rb model
+	class Survey < ActiveRecord::Base
+		validates :name, :location, :language, presence: true
+	end
