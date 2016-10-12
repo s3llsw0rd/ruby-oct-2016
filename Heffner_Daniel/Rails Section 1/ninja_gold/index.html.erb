@@ -1,0 +1,82 @@
+<div class="row topspace">
+	<div class="col-xs-6">
+		<div class="input-group has-warning">
+			<span class="input-group-addon">Your Gold:</span>
+			<input type="number" class="form-control" id="gold-count" aria-described-by="gold-text" value="<%= @gold %>" disabled>
+		</div>
+	</div>
+	<div class="col-xs-6 text-right">
+		<form action="/reset" method="post">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<button class="btn btn-danger" type="submit">Reset</button>
+		</form>
+	</div>
+</div>
+<div class="row topspace">
+	<div class="col-sm-6 col-md-3">
+		<div class="panel black-border">
+			<div class="panel-body text-center bg-warning rounded">
+				<h3>Farm</h3>
+				<p>(earns 10 to 20 golds)</p>
+				<form action="/process" method="post">
+					<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+					<input type="hidden" name="location" value="farm">
+					<button type="submit" class="btn btn-success">Find Gold!</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<div class="panel black-border">
+			<div class="panel-body text-center bg-warning rounded">
+				<h3>Cave</h3>
+				<p>(earns 5 to 10 golds)</p>
+				<form action="/process" method="post">
+					<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+					<input type="hidden" name="location" value="cave">
+					<button type="submit" class="btn btn-success">Find Gold!</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<div class="panel black-border">
+			<div class="panel-body text-center bg-warning rounded">
+				<h3>House</h3>
+				<p>(earns 2 to 5 golds)</p>
+				<form action="/process" method="post">
+					<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+					<input type="hidden" name="location" value="house">
+					<button type="submit" class="btn btn-success">Find Gold!</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<div class="panel black-border">
+			<div class="panel-body text-center bg-warning rounded">
+				<h3>Casino</h3>
+				<p>(earns/takes 0 to 50 golds)</p>
+				<form action="/process" method="post">
+					<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+					<input type="hidden" name="location" value="casino">
+					<button type="submit" class="btn btn-success">Find Gold!</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="panel panel-warning black-border">
+			<div class="panel-heading black-border">
+				Activities
+			</div>
+			<div class="panel-body black-border" id="activities">
+				<% session[:activities].reverse_each do |activity| %>
+					<p class="text-<%= activity["tag"] %>"><%= activity["description"] %></p>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
