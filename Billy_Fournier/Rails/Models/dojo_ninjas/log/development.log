@@ -1,0 +1,162 @@
+  [1m[36m (20.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (14.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDojos (20161006205453)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "dojos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161006205453"]]
+  [1m[35m (13.9ms)[0m  commit transaction
+Migrating to CreateNinjas (20161006205705)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateNinjas (20161006205819)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "ninjas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "dojo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_ninjas_on_dojo_id" ON "ninjas" ("dojo_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161006205819"]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ninjas_on_dojo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ninjas_on_dojo_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ninjas_on_dojo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ninjas_on_dojo_id' AND type='index'
+[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "dojos" ("name", "location", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "CodingDojo Silcon Valley"], ["location", "Mountain View"], ["state", "CA"], ["created_at", "2016-10-06 21:01:38.440594"], ["updated_at", "2016-10-06 21:01:38.440594"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mDojo Load (0.5ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ninjas_on_dojo_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ninjas_on_dojo_id' AND type='index'
+[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "dojos" ("name", "location", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "CodingDojo Silcon Valley"], ["location", "Mountain View"], ["state", "CA"], ["created_at", "2016-10-06 21:04:30.566608"], ["updated_at", "2016-10-06 21:04:30.566608"]]
+  [1m[36m (11.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mDojo Load (0.5ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36mDojo Load (0.5ms)[0m  [1mSELECT "dojos".* FROM "dojos"[0m
+  [1m[36mDojo Load (2.2ms)[0m  [1mSELECT "dojos".* FROM "dojos"[0m
+  [1m[35mDojo Load (0.5ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36mDojo Load (0.5ms)[0m  [1mSELECT "dojos".* FROM "dojos"[0m
+  [1m[35mDojo Load (0.7ms)[0m  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "dojos" WHERE "dojos"."id" = ?  [["id", 2]]
+  [1m[36m (15.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mDojo Load (0.5ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "dojos" ("id", "created_at", "updated_at") VALUES (?, ?, ?)  [["id", 2], ["created_at", "2016-10-06 21:09:53.279017"], ["updated_at", "2016-10-06 21:09:53.279017"]]
+  [1m[36m (15.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mDojo Load (0.6ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "dojos" ("name", "location", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "CodingDojo Seattle"], ["location", "Seattle"], ["state", "WA"], ["created_at", "2016-10-06 21:10:40.975691"], ["updated_at", "2016-10-06 21:10:40.975691"]]
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "dojos" ("name", "location", "state", "id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "CodingDojo Seattle"], ["location", "Seattle"], ["state", "WA"], ["id", 2], ["created_at", "2016-10-06 21:10:56.522962"], ["updated_at", "2016-10-06 21:10:56.522962"]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mDojo Load (0.5ms)[0m  [1mSELECT "dojos".* FROM "dojos"[0m
+  [1m[35mDojo Load (0.3ms)[0m  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "dojos" WHERE "dojos"."id" = ?  [["id", 2]]
+  [1m[36m (15.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDojo Load (0.4ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "dojos" ("id", "created_at", "updated_at") VALUES (?, ?, ?)  [["id", 2], ["created_at", "2016-10-06 21:11:35.464093"], ["updated_at", "2016-10-06 21:11:35.464093"]]
+  [1m[36m (14.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mDojo Load (0.4ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "dojos" ("name", "location", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "CodingDojo New York"], ["location", "New York"], ["state", "NY"], ["created_at", "2016-10-06 21:13:00.527605"], ["updated_at", "2016-10-06 21:13:00.527605"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDojo Load (0.5ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36mDojo Load (0.3ms)[0m  [1mSELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "dojos" WHERE "dojos"."id" = ?[0m  [["id", 2]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36mDojo Load (0.5ms)[0m  [1mSELECT "dojos".* FROM "dojos"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "dojos" ("name", "location", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "CodingDojo New York"], ["location", "New York"], ["state", "N"], ["created_at", "2016-10-06 21:17:05.988836"], ["updated_at", "2016-10-06 21:17:05.988836"]]
+  [1m[35m (10.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "dojos" ("name", "location", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "CodingDojo New York"], ["location", "New York"], ["state", "N"], ["created_at", "2016-10-06 21:18:02.480653"], ["updated_at", "2016-10-06 21:18:02.480653"]]
+  [1m[36m (10.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mDojo Load (0.5ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36mDojo Load (0.6ms)[0m  [1mSELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "dojos" WHERE "dojos"."id" = ?[0m  [["id", 6]]
+  [1m[35m (15.0ms)[0m  commit transaction
+  [1m[36mDojo Load (0.3ms)[0m  [1mSELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "dojos" WHERE "dojos"."id" = ?[0m  [["id", 5]]
+  [1m[35m (10.8ms)[0m  commit transaction
+  [1m[36mDojo Load (0.6ms)[0m  [1mSELECT "dojos".* FROM "dojos"[0m
+  [1m[35mDojo Load (0.4ms)[0m  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ninjas" ("first_name", "last_name", "dojo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Billy"], ["last_name", "Fournier"], ["dojo_id", 3], ["created_at", "2016-10-06 21:22:25.852331"], ["updated_at", "2016-10-06 21:22:25.852331"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDojo Load (0.3ms)[0m  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mDojo Load (0.3ms)[0m  [1mSELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ninjas" ("first_name", "last_name", "dojo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Fournier"], ["dojo_id", 1], ["created_at", "2016-10-06 21:23:16.630908"], ["updated_at", "2016-10-06 21:23:16.630908"]]
+  [1m[35m (15.7ms)[0m  commit transaction
+  [1m[36mDojo Load (0.3ms)[0m  [1mSELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ninjas" ("first_name", "last_name", "dojo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Craig"], ["last_name", "Fournier"], ["dojo_id", 4], ["created_at", "2016-10-06 21:23:28.803218"], ["updated_at", "2016-10-06 21:23:28.803218"]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  [1m[36mDojo Load (0.3ms)[0m  [1mSELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDojo Load (0.3ms)[0m  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mDojo Load (0.4ms)[0m  [1mSELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDojo Load (0.3ms)[0m  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mNinja Load (0.6ms)[0m  [1mSELECT "ninjas".* FROM "ninjas" WHERE "ninjas"."dojo_id" = ?[0m  [["dojo_id", 1]]
+  [1m[35mDojo Load (0.6ms)[0m  SELECT "dojos".* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"
+  [1m[36mDojo Load (0.7ms)[0m  [1mSELECT "dojos".* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"[0m
+  [1m[35mDojo Load (0.9ms)[0m  SELECT ninjas.* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"
+  [1m[36mDojo Load (0.7ms)[0m  [1mSELECT dojos.*, ninjas.* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"[0m
+  [1m[35mDojo Load (1.1ms)[0m  SELECT dojos.*, ninjas.* FROM "dojos"
+  [1m[36mDojo Load (0.3ms)[0m  [1mSELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDojo Load (0.6ms)[0m  SELECT dojos.*, ninjas.* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"
+  [1m[36mDojo Load (0.3ms)[0m  [1mSELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ninjas" ("first_name", "last_name", "dojo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Billy Jay"], ["last_name", "Fournier"], ["dojo_id", 3], ["created_at", "2016-10-06 21:31:43.298947"], ["updated_at", "2016-10-06 21:31:43.298947"]]
+  [1m[35m (11.6ms)[0m  commit transaction
+  [1m[36mDojo Load (0.8ms)[0m  [1mSELECT dojos.*, ninjas.* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"[0m
+  [1m[35mDojo Load (1.0ms)[0m  SELECT dojos.*, ninjas.* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"  ORDER BY name DESC
+  [1m[36mDojo Load (0.5ms)[0m  [1mSELECT "dojos".* FROM "dojos"[0m
+  [1m[35mNinja Load (0.6ms)[0m  SELECT "ninjas".* FROM "ninjas"
+  [1m[36mDojo Load (0.9ms)[0m  [1mSELECT dojos.*, ninjas.*, ninjas.id AS nid FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"  ORDER BY name DESC[0m
+  [1m[35mDojo Load (0.8ms)[0m  SELECT dojos.*,dojos.id AS did, ninjas.*, ninjas.id AS nid FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"  ORDER BY name DESC
+  [1m[36mDojo Load (0.8ms)[0m  [1mSELECT dojos.*,dojos.id AS id, ninjas.*, ninjas.id AS nid FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"  ORDER BY name DESC[0m
+  [1m[35mDojo Load (1.4ms)[0m  SELECT ninjas.*,id AS did, ninjas.id AS nid FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"  ORDER BY name DESC
+  [1m[36mDojo Load (0.9ms)[0m  [1mSELECT ninjas.*, ninjas.id AS nid, dojos.* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"  ORDER BY name DESC[0m
+  [1m[36mDojo Load (2.4ms)[0m  [1mSELECT "dojos".* FROM "dojos"[0m
+  [1m[35mDojo Load (0.7ms)[0m  SELECT "dojos".* FROM "dojos"
+  [1m[36mDojo Load (0.6ms)[0m  [1mSELECT "dojos".* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"[0m
+  [1m[35mDojo Load (1.3ms)[0m  SELECT dojos.*,ninja.first_name FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"
+  [1m[36mDojo Load (0.7ms)[0m  [1mSELECT dojos.*,ninjas.first_name FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"[0m
+  [1m[35mDojo Load (0.7ms)[0m  SELECT ninjas.first_name,dojos.* FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"
+  [1m[36mDojo Load (0.8ms)[0m  [1mSELECT dojos.*, ninjas.first_name FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"  ORDER BY name DESC[0m
+  [1m[35mDojo Load (0.8ms)[0m  SELECT dojos.*, ninjas.first_name, ninjas.id AS nid FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"  ORDER BY name DESC
+  [1m[36mDojo Load (0.7ms)[0m  [1mSELECT dojos.*, ninjas.first_name, ninjas.last_name, ninjas.id AS nid FROM "dojos" INNER JOIN "ninjas" ON "ninjas"."dojo_id" = "dojos"."id"  ORDER BY name DESC[0m
