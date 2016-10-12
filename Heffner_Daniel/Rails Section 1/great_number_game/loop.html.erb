@@ -1,0 +1,29 @@
+<div class="container">
+	<h1>Welcome to the Great Number Game!</h1>
+	<p>I am thinking of a number between 1 and 100</p>
+	<p>Take a guess!</p>
+	<% if flash[:wrong] %>
+		<div class="wrong">
+			<p>You guessed <%= flash[:guess] %></p>
+			<h3><%= flash[:message] %></h3>
+		</div>
+	<% end %>
+	<% if flash[:right] %>
+		<div class="right">
+			<h3><%= flash[:message] %></h3>
+			<form action="/reset" method="get">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="submit" value="Play Again!">
+			</form>
+		</div>
+	<% end %>
+	<% if ! flash[:right] %>
+		<form action="/guess" method="post">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<label for="newGuess">Enter your guess:</label>
+			<input type="number" name="newGuess" id="newGuess">
+			<input type="submit" value="Submit">
+		</form>
+	<% end %>
+
+</div>
