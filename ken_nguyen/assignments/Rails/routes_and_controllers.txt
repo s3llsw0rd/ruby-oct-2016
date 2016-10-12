@@ -1,0 +1,72 @@
+#routes and controllers assignment
+
+rails new routes_and_controllers
+#gem bundle installed 'hirb' and 'rails-footnotes', '>=4.0.0', '<5'
+
+rails generate rails_footnotes:install
+
+rails g controller Say index
+rails g controller Hello index
+rails g controller Times
+
+rake db:migrate
+
+
+## on routes.rb file 
+	Rails.application.routes.draw do
+	  get '/hello' => 'hello#index'
+
+	  get '/say' => 'say#index'
+	  get 'say/hello' => 'say#hello'
+	  get 'say/hello/joe' => 'say#joe'
+	  get 'say/hello/michael' => 'say#michael'
+
+	  get 'times/index'
+	  get '/times' => 'times#index'
+	  get '/times/restart' => 'times#restart'
+
+	  root :to => 'say#index'
+	end
+
+
+## on say_controller.rb
+	class SayController < ApplicationController
+	  def index
+	  	render text: "What do you want me to say???"
+	  end
+
+	  def hello
+	  	render text: "Saying Hello!"
+	  end
+
+	  def joe
+	  	render text: "Saying Hello Joe!"
+	  end
+
+	  def michael
+	  	redirect_to say_hello_joe_path
+	  end
+	end
+
+
+## on hello_controller.rb
+	class HelloController < ApplicationController
+	  def index
+	  	render text: "Hello CodingDojo!"
+	  end
+	end
+
+
+## on times_controller.rb
+	class TimesController < ApplicationController
+	  def index
+	  	session[:count] || session[:count] = 0
+	  	session[:count] += 1
+	  	render text: "You visited this url #{session[:count]} time(s)."
+	  end
+
+	  def restart
+	  	session[:count] = nil
+	  	render text: "Destroyed the session!"
+	  end
+	end
