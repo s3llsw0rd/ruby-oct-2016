@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div>
+	<%if flash[:success]%>
+		<div id="success">
+			<p><%= flash[:success]%></p>
+		</div>
+		<%end%>
+
+</div>
+	<h1>Submitted Information:</h1>
+	<p>Name: <%=@result['name']%></p>
+	<p>Dojo Location: <%=@result['location']%></p>
+	<p>Favorite Language: <%=@result['language']%></p>
+	<p>Comment: <%=@result['comment']%></p>
+	<form action="/" method="GET">
+		<input type="submit" value="Go Back">
+	</form>
+</body>
+</html>
