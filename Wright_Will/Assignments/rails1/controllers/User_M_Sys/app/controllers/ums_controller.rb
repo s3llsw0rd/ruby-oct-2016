@@ -1,0 +1,2 @@
+class UmsController < ApplicationController
+end
