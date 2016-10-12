@@ -1,0 +1,30 @@
+<h1>Take the Dojo Survey!</h1>
+<form action="/create" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label>Your Name: <input type="text" name="survey[name]"></label>
+	<label>
+		Dojo Location:
+		<select name="survey[location]">
+			<option>Mountain View</option>
+			<option>Dallas</option>
+			<option>San Francisco</option>
+			<option>Mars</option>
+			<option>This option should cause an error</option>
+		</select>
+	</label>
+	<label>
+		Favorite Language:
+		<select name="survey[language]">
+			<option>Python</option>
+			<option>Ruby</option>
+			<option>Javascript</option>
+			<option>Klingon</option>
+			<option>This option should cause an error</option>
+		</select>
+	</label>
+	<label>
+		Comment (optional):
+		<textarea name="survey[comment]"></textarea>
+	</label>
+	<input type="submit" value="Submit">
+</form>
