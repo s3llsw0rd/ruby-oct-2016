@@ -1,0 +1,89 @@
+#Integrating Models with the Controller assignment
+
+rails new models_controllers
+cd models_controllers
+vim Gemfile
+
+gem 'hirb'
+gem 'rails-footnotes', '>=4.0.0', '<5'
+
+bundle install
+rails generate rails_footnotes:install
+
+rails g model User name:string
+rake db:migrate
+
+rails g controller Users index new show edit
+
+## routes.rb
+	Rails.application.routes.draw do
+
+	  get 'users/' => 'users#index'
+
+	  get 'users/new' => 'users#new'
+
+	  get 'users/create' => 'users#create'
+
+	  get 'users/total' => 'users#total'
+
+	  get 'users/:id' => 'users#show'
+
+	  get 'users/:id/edit' => 'users#edit'
+	end
+	  
+## users_controller.rb
+	class UsersController < ApplicationController
+	  def index
+	  	@users = User.all 
+	  	render json: @users
+	  end
+
+	  def new
+	  	render 'users/new'
+	  end
+
+	  def create
+	  	name = (0..8).map {((rand(2)==1?65:97)+rand(26)).chr}.join
+	  	@user = User.create(name:name)
+	  	redirect_to users_path
+	  end
+
+	  def show
+	  	@user = User.find(params[:id])
+	  	render json: @user
+	  end
+
+	  def edit
+	  	@user = User.find(params[:id])
+	  	render 'users/edit'
+	  end
+
+	  def total
+	  	@total = User.all
+	  	render text: "Total # of users: #{@total.size}"
+	  end
+	end
+
+## new.html.erb
+	<h1>Users#new</h1>
+	<p>Find me in app/views/users/new.html.erb</p>
+	<h3>Create a new user, foo</h3>
+	<form>
+		<input name='authenticity_token' value='<%= form_authenticity_token %>' type='hidden'>
+		<label for='name'>Name: </label>
+		<input type='text' name='name' id='name'>
+		<input type='submit' value='submit'>
+	</form>
+
+
+## edit.html.erb
+	<h1>Users#edit</h1>
+	<p>Find me in app/views/users/edit.html.erb</p>
+
+	<h3>Edit User <%= @user[:id] %> </h3>
+	<form>
+		<input type='hidden' name='authenticity_token' value='<%=form_authenticity_token %>'>
+		<label for='name'>Name: </label>
+		<input type='text' name='name' id='name' value='<%= @user[:name] %>'>
+		<input type='submit' value='submit'>
+	</form>
