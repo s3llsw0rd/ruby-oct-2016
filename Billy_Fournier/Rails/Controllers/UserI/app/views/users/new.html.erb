@@ -1,0 +1,15 @@
+<%= form_for @user do |f| %>
+  <%= f.label :first_name %>:
+  <%= f.text_field :first_name , :value => a = Faker::Name.first_name %><br />
+
+  <%= f.label :last_name %>:
+  <%= f.text_field :last_name, :value => b = Faker::Name.last_name %><br />
+
+  <%= f.label   :email %>:
+  <%= f.text_field :email, :value => Faker::Internet.email(a+"."+b) %><br />
+
+  <%= f.label :password %>:
+  <%= f.text_field :password, :value => Faker::Internet.password(4,8)%><br />
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,3127 @@
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-12 18:51:14 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 19ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 18:51:18 -0500
+
+ActionController::RoutingError (No route matches [GET] "/rpgs"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.7ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.9ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.3ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 18:51:42 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3064ms (Views: 3062.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 18:51:45 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 18:51:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 18:51:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 18:51:45 -0500
+
+
+Started GET "/assets/application.self-cd3492fa5b8aa065a0507da31b25ad355080f06539db0204f688e8dc43331432.css?body=1" for 127.0.0.1 at 2016-10-12 18:51:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 18:51:45 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 18:58:03 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1227ms (Views: 1226.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4120d902b431f5b08185d8265b656d166a3b04c0249853a7b5f37b5bec5cbcb2.css?body=1" for 127.0.0.1 at 2016-10-12 18:58:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:04 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:04 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:04 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 18:58:11 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1173ms (Views: 1172.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 18:58:12 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:12 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:12 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 18:58:24 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 18:58:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:24 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:24 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:24 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 18:58:53 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 18:58:53 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:53 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:53 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:53 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:53 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 18:58:53 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 18:59:01 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 18:59:01 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:01 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:01 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 18:59:19 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 18:59:19 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:19 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:19 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:19 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:19 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:19 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 18:59:35 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 18:59:35 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:35 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:35 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:35 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 18:59:35 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:00:00 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 19:00:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:00 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:00 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:00 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:00:27 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 19:00:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:28 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:28 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:28 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:28 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:28 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:00:36 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 19:00:36 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:36 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:36 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:36 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:36 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:36 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:00:57 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 19:00:57 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:57 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:57 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:57 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:00:57 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:01:02 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 19:01:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:02 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:02 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:02 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:02 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:01:08 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-40cb4acbcea23ddc6f9499f614a332d142ab9cafc5a9ad20bba472c3d2dc2c3a.css?body=1" for 127.0.0.1 at 2016-10-12 19:01:08 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:08 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:08 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:08 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:08 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:08 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:01:49 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1109ms (Views: 1108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:01:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:50 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:50 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:01:50 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:03:43 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:03:43 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:43 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:43 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:43 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:43 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:43 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:03:53 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:03:53 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:53 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:53 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:53 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:53 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:03:53 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:04:29 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:29 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:29 -0500
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:04:29 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:04:30 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:04:30 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:30 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:30 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:30 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:04:39 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:04:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:39 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:39 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:39 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:04:40 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:04:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:41 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:41 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:04:41 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:05:47 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:05:47 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:05:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:05:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:05:47 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:05:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:05:47 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:06:13 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:06:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:06:13 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:06:13 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:06:13 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:06:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:06:13 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:07:51 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8829bdb5c1cc5654ebe3f9f86ad60cb3857f865c73ae114e393682aa04c9983.css?body=1" for 127.0.0.1 at 2016-10-12 19:07:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:07:51 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:07:51 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:07:51 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:07:51 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:07:51 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:08:00 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1292ms (Views: 1290.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1da04efad04edad888d6469ae4071ee1ed71f63e0fd2e4acb4ac522211b4f147.css?body=1" for 127.0.0.1 at 2016-10-12 19:08:02 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:02 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:02 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:02 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:08:13 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1447ms (Views: 1446.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:08:14 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:14 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:14 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:14 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:14 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:14 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:08:39 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:08:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:39 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:39 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:39 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:08:54 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:08:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:54 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:54 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:54 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:08:54 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:09:02 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:09:02 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:09:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:09:02 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:09:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:09:02 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:09:02 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:12:33 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:12:34 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:12:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:12:34 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:12:34 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:12:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:12:34 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:15:46 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:15:46 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:15:46 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:15:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:15:46 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:15:46 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:15:46 -0500
+
+
+Started GET "/rpgs/find?action=cave" for 127.0.0.1 at 2016-10-12 19:15:57 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for RpgsController):
+  actionpack (4.2.6) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.9ms)
+
+
+Started GET "/rpgs/find?action=cave" for 127.0.0.1 at 2016-10-12 19:16:01 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for RpgsController):
+  actionpack (4.2.6) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.7ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.1ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:16:17 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:16:17 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:17 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:17 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:17 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:17 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:17 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:16:18 -0500
+Processing by RpgsController#find as HTML
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.6ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.4ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:16:30 -0500
+Processing by RpgsController#find as HTML
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.6ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:16:34 -0500
+Processing by RpgsController#find as HTML
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.6) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/billy/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.8ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.6ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:16:36 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:16:36 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:36 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:36 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:36 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:36 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:36 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:16:37 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:16:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:37 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:37 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:16:37 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:16:38 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"56CVd+fNL6kiffS36Bas1YDyLMl/xQyGIGUjSJ8RnLBXOJKg6IfIdmO48jge+UNgCWHNjquLWd4tXKqKRsNDpA=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:16:38 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:16:40 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"KMxLy29/WD5GFVps4e7mWkA1i0kP6ASWhIIX3FvYpceYVEwcYDW/4QfQXOMXAQnvyaZqDtumUc6Ju54eggp60w=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:16:40 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:16:41 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"r17dQy31qkqzVmrBMjpjUtHhO9iWENGPvsDYFdu2TEEfxtqUIr9NlfKTbE7E1YznWHLan0JehNez+VHXAmSTVQ=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:16:41 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:16:42 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"amm6EUQryvY7CidLxxmbphcMv6bBXcvaomTK2SwmNg3a8b3GS2EtKXrPIcQx9nQTnp9e4RUTnoKvXUMb9fTpGQ=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:16:42 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:16:54 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"hEnqWo5HjkoW+abrwgqrWN5PO9SLcxuZ03/3wJ5b2WY00e2NgQ1plVc8oGQ05UTtV9zak189TsHeRn4CR4kGcg=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:16:54 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:16:55 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"3tPJHKaEb8o19r7E8YHJwOzCjgmf6crA123LLKazY3FuS87Lqc6IFXQzuEsHbiZ1ZVFvTkunn5jaVELuf2G8ZQ=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:16:55 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:17:07 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"gmkmUbV9c1Mp5ufGzA/UJwGmA5Q9dLVMcRz+JotGNM4y8SGGujeUjGgj4Uk64DuSiDXi0+k64BR8JXfkUpTr2g=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:17:07 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:17:09 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"PpKTYDB2qQyCeR7T3w/6wbYslVedh/GSBUSrFc2vgD2OCpS3PzxO08O8GFwp4BV0P790EEnJpMoIfSLXFH1fKQ=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:17:09 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:17:10 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"02hMeylHZP43CWK4HKwnweQmLMGb6FkgLxytDzYvCGlj8EusJg2DIXbMZDfqQ8h0bbXNhk+mDHgiJSTN7/3XfQ=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:17:10 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:17:23 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"mC24GbE53ihfrr36isGCFN9VOV0tMQRcl6LO6vQGYjgotb/OvnM59x5ru3V8Lm2hVsbYGvl/UQSam0coLdS9LA=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:17:23 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:17:30 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"5Y4JK04RVeFzZ/O8rdWkuXaJZl2BoEbEGJuaYv0K665VFg78QVuyPjKi9TNbOksM/xqHGlXuE5wVohOgJNg0ug=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:17:30 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:17:33 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"+6d0j9adWeNrDXJR2/schxnHrjHJWtik/+EQIQe5DcRLP3NY2de+PCrIdN4tFPMykFRPdh0Ujfzy2Jnj3mvS0A=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:17:33 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:19:39 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:19:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:39 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:39 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:39 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:19:50 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:19:50 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:50 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:19:50 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:19:52 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"sz+8K/co+W2x++h4PhTTv/OymACOY4z/wkkAMkRZhkEDp7v8+GIesvA+7vfI+zwKeiF5R1ot2afPcInwnYtZVQ=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:19:52 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:20:00 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"Ut6gWBSX6GVzXBI5rV8CdHs+XV/+vkR4ph8X52FmmRTiRqePG90PujKZFLZbsO3B8q28GCrwESCrJp4luLRGAA=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:20:00 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:20:37 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:20:38 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:20:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:20:38 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:20:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:20:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:20:38 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:20:39 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"Z5g2+A75zRBVDtuG4KyN38RXPh3nz/JnXglcqHcV8UXXADEvAbMqzxTL3QkWQ2JqTcTfWjOBpz9TMNVqrscuUQ=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:20:39 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:20:42 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"vOmPPwie1ztdHDdlPMFUpiwRn7Hna3eT0Mwu+F2jmJMMcYjoB9Qw5BzZMerKLrsTpYJ+9jMlIsvd9ac6hHFHhw=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:20:42 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:22:18 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:22:18 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:22:18 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:22:18 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:22:18 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:22:18 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:22:18 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:22:19 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"MP1EvgzEUvJs2l+IupuAWIrV6ICwuGgXnK85CbjuZV6AZUNpA461LS0fWQdMdG/tA0YJx2T2PU+RlrDLYTy6Sg=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:22:19 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:22:22 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"QGS7/qW7xW2zYrM9d1QI0qbpb0F9DrhYQG+Y8yLSZEbw/LwpqvEisvKntbKBu+dnL3qOBqlA7QBNVhEx+wC7Ug=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:22:22 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:23:07 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"RVBB4erN3TwUIQO2Yz3ILrPS7OaVALjRQ+QoBMCRhsT1yEY25Yc641XkBTmV0iebOkENoUFO7YlO3aHGGUNZ0A=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:23:07 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:23:09 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"hT8X7mswbq9tAsxjHpNEF34m46EN6Nm+iHgrInt2QHo1pxA5ZHqJcCzHyuzofKui97UC5tmmjOaFQaLgoqSfbg=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:23:09 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:23:10 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"MHNhDJ1w0ePMqr/ujtfogQiAUA24Uq9PzVHsmXT/JYqA62bbkjo2PI1vuWF4OAc0gROxSmwc+hfAaGVbrS36ng=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:23:10 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:23:16 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"jrTKJiVdUMl5w+lUZfYsqJIJY+93qNHbWRoKz1NMsj4+LM3xKhe3FjgG79uTGcMdG5qCqKPmhINUI4MNip5tKg=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:23:16 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:23:18 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"+FDP67TuiS8enyjyzTWnx28E3CeB2EgBBU8bjtqj8DlIyMg8u6Ru8F9aLn072khy5pc9YFWWHVkIdpJMA3EvLQ=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:23:18 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:23:22 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"BA9TzRK13uGEGJzI9/aANRfhS52FbK+hjp5a/kA5N6u0l1QaHf85PsXdmkcBGW+AnnKq2lEi+vmDp9M8mevovw=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:23:22 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:23:23 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"P8uL2RJdzSAlSlD7+elfHZYkOIqPC7uR/RsSmncs6DyPU4wOHRcq/2SPVnQPBrCoH7fZzVtF7snwIptYrv43KA=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:23:23 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:26:02 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"ZK0d3Oqbz13cS+WOfKpXXY1gyqTAYq+R0EHiXetsb87UNRoL5dEogp2O4wGKRbjoBPMr4xQs+sndeGufMr6w2g=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:02 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:04 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:26:04 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:04 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:04 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:26:05 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"dUYczgdjwUJ+nrYqA+VtBDVNm2BHCymuHtidyfSmoNLF3hsZCCkmnT9bsKX1CoKxvN56J5NFfPYT4RQLLXR/xg=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:05 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:26:08 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"SQf1zGS8fkSVAK10sHG/NghPO6vEfNvtmSuMhUWiXOL5n/Iba/aZm9TFq/tGnlCDgdza7BAyjrWUEgVHnHCD9g=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:08 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:26:08 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"1f9y0u6jzekQlgOG7dyGhrlsL+oEKwt0M+W0CG+8dlplZ3UF4ekqNlFTBQkbM2kzMP/OrdBlXiw+3D3Ktm6pTg=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:08 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:26:12 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"ugpzbtvTwm7hRr0TLV56FELuyNTS4J0NtLwbEaXecu0KknS51JklsaCDu5zbsZWhy30pkwauyFW5hZLTfAyt+Q=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:12 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:26:26 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"imCzXYxtPKqNIEieHCaRXLVUxy9d+vHt8PFUQZZoNn46+LSKgyfbdczlThHqyX7pPMcmaIm0pLX9yN2DT7rpag=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:26 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:47 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:26:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:47 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:47 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:26:47 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:26:49 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"MFd5Ih4TeHWPOXTPbr0s76OZY+N3yhPxB0uy9Y/oVgmAz371EVmfqs78ckCYUsNaKgqCpKOERqkKcjs3VjqJHQ=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:49 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:26:51 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"2FzIcGJMrbjgEiR/GsspEA6SbYso0LlAqjQP0l+NAnJoxM+nbQZKZ6HXIvDsJMalhwGMzPye7BinDYYQhl/dZg=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:51 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:26:52 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"TgfqV0n1VhjCMnB191RlV8QlpRnx3KCPD7zs/JagscX+n+2ARr+xx4P3dvoBu4riTbZEXiWS9dcChWU+T3Ju0Q=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:26:52 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:27:20 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:27:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:20 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:20 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:20 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:27:21 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"qgIESbZOiqXrisrZzbvimE5isSbi6emyh9sBg7FHs5IamgOeuQRteqpPzFY7VA0tx/FQYTanvOqK4ohBaJVshg==", "abc"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:27:21 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:27:51 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:27:51 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:51 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:51 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:51 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:27:51 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:27:52 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"XbM+BzH67lqESQ7kPEDW6AFoHf9c566vnsQP72XtNiztKznQPrAJhcWMCGvKrzldiPv8uIip+/eT/YYtvD/pOA=="}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:27:52 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:28:05 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:28:05 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:05 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:05 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:05 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:05 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:28:06 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"4l1TLx9RVgVNQliWTxASb3zV3AHPOV00wspWnLP+IxlSxVT4EBux2gyHXhm5//3a9UY9Rht3CGzP899eaiz8DQ==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:28:06 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:28:18 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"ma0lI8XJAbk9d1grq827qYzkj/Sw/mLxJIuF1WIXpCwpNSL0yoPmZnyyXqRdIlQcBXdus2SwN6kpsgwXu8V7OA==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:28:18 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:28:22 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:28:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:22 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:22 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:22 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:28:23 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"O5xYpAseA7JUurvbrT2JbSd8PXy+Roab5ZPIZoNxFiGLBF9zBFTkbRV/vVRb0mbYru/cO2oI08PoqkGkWqPJNQ==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:28:23 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:28:55 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:28:55 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:55 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:55 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:28:55 -0500
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:28:56 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"cAFW6tv8mslyyFZ/xa72Py86Eg99gNJFEAGlQuL7/uDAmVE91LZ9FjMNUPAzQRmKpqnzSKnOhx0dOCyAOykh9A==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:28:56 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:28:58 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"aXrTsU5LmTiKSfltaGHjuUIBmpJDDhU4ineaqUoimW/Z4tRmQQF+58uM/+KejgwMy5J71ZdAQGCHThNrk/BGew==", "act"=>"house"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:28:58 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-12 19:29:00 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"wQXVY7NRXLZNp2/VcJnbhKkGBgGd8oxISOVInIoTzF9xndK0vBu7aQxiaVqGdjQxIJXnRkm82RBF3MFeU8ETSw==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:29:00 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:45:56 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:45:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:45:56 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:45:56 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:45:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:45:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:45:56 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-12 19:47:41 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1ee2cf36d668b4339aaaec7b906c342fa669121f9732fe961ee66b8f1ad8e2b8.css?body=1" for 127.0.0.1 at 2016-10-12 19:47:41 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-10-12 19:47:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-10-12 19:47:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-10-12 19:47:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 19:47:41 -0500
+
+
+Started GET "/assets/rpgs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 19:47:41 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-13 10:21:14 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (4.2ms)
+Completed 200 OK in 32ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-13 10:21:38 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 337ms (Views: 336.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:21:40 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"H134c0vWQUXl+rRgAEEgqhvHVSfSVhycYvxzVRXvs3UpWAYV7R3puonBmpmUutUJrQs7d4499x6jM330BABcEA==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:21:40 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:21:42 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"VIzP7pj653gkri8FgehKddLKJSGaAR3O4LnhZjgQxj9iiTGIPjFPh0iVAfwVE7/WZAZLccZq9kwhdu/HKf8pWg==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:21:42 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:21:42 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"2JRF8UOauIB5JIkXWN+d7iIsJqVJYPdyxdeRasDCBqDukbuX5VEQfxUfp+7MJGhNlOBI9RULHPAEGJ/L0S3pxQ==", "act"=>"house"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:21:42 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:21:43 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"IdCknyMk7MgoaQa5CYqsPL7eOKTZyf68iSUbSwo68VcX1Vr5he9EN0RSKECdcVmfCBJW9IWiFT5I6hXqG9UeMg==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:21:43 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:31:09 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"NQI6tBiTjmK/TM0yDShFrsaVk3fOD1lDM6xDeRLyRDsDB8TSvlgmndN348uZ07ANcFn9J5JkssHyY03YAx2rXg==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:31:09 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:49:40 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"PsMjtI9z4IqiADN3sXA+fsK5Cr9ESebZh+O1AvesERQIxt3SKbhIdc47HY4li8vddHVk7xgiDVtGLLuj5kP+cQ==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:49:40 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:50:09 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"BiGIJYfdS6BCAbFjP2cTGC/377Q4hp7zhYSdjHlkXJwwJHZDIRbjXy46n5qrnOa7mTuB5GTtdXFES5MtaIuz+Q==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:50:09 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:50:11 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"oeeiyCwCzInpQXqZoZ/7zlr/8gi9Sx+KiBP32aZ4HoeX4lyuislkdoV6VGA1ZA5t7DOcWOEg9AhJ3Pl4t5fx4g==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:50:11 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:57:52 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:57:53 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"8UeMYQtNI5tqZeX391h8c/GSuGJiHp9l2sCIhcnmGSLHQnIHrYaLZAZeyw5jo4nQR17WMj51dOcbD4Yk2An2Rw==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:57:53 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:57:55 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"3+h2r6OEnBka/5lqKLWpQe8gyy9npkJ5Ronv2J6c2Rrp7YjJBU805nbEt5O8TlziWeylfzvNqfuHRuF5j3M2fw==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:57:55 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:57:57 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"paOvJAh/JWXGcyB+S6v8WGIK2xhAd9i8Fy3T0CqbX6iTplFCrrSNmqpIDoffUAn71Ma1SBwcMz7W4t1xO3SwzQ==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:57:57 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:57:57 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"p8RNxgTMhneVEt9fDvFEwr0Lb6qCg3HlCCM4qgzbtFiRwbOgogcuiPkp8aaaCrFhC8cB+t7ommfJ7DYLHTRbPQ==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:57:57 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:57:58 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"QTpMLlomtLV7FYlLm8n24zNXtq3k5Bn49d1O1xn9eqR3P7JI/O0cShcup7IPMgNAhZvY/biP8no0EkB2CBKVwQ==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:57:58 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:57:59 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"YRdvnILyeDAvdFgITr5esWMoRxtez9xTb+enZMA+ls5XEpH6JDnQz0NPdvHaRasS1eQpSwKkN9GuKKnF0dF5qw==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:57:59 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:00 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"YFlyip7tMZ7qSI9gXdDKC9T3va8jkSqPjaah4hipDUVWXIzsOCaZYYZzoZnJKz+oYjvT/3/6wQ1Maa9DCUbiIA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:00 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:01 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"lT8X3/LPvzfWrm/C3v09YOqw/ke+BgTYgbce+WJDMFKjOum5VAQXyLqVQTtKBsjDXHyQF+Jt71pAeBBYc6zfNw==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:01 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:01 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"4FK/JPJlqOnAXmYda2MuBGOBZaANxB+LkxTCCgrg1qHWV0FCVK4AFqxlSOT/mNun1U0L8FGv9AlS28yrGw85xA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:01 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:02 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"CDHkILw+zRlDK9hL/LWCKj0NbSrnIoqsWgaDwCEKIsc+NBpGGvVl5i8Q9rJoTneJi8EDertJYS6byY1hMOXNog==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:02 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:03 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"VchLEV6h8HtohtrbMqdbtn7mwcV3HAGiL7HoCF3HyrZjzbV3+GpYhAS99CKmXK4VyCqvlSt36iDufuapTCgl0w==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:03 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:03 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"dDV3JTWR3Y3ToDmpzHwhmm+VEo/ERKY6QcJHvXsqbQNCMIlDk1p1cr+bF1BYh9Q52Vl835gvTbiADUkcasWCZg==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:03 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:04 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"V87dfszB/6s5HC2IqYIiemscfAsfgZM0b1E9P7lILxNhyyMYagpXVFUnA3E9edfZ3dASW0PqeLaunjOeqKfAdg==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:04 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:04 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"xTXZ8INM/bHUVBAVXcdqrFm52XMQpEDjGxJeuASEwjDzMCeWJYdVTrhvPuzJPJ8P73W3I0zPq2Ha3VAZFWstVQ==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:04 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:05 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"vbz60Kux4rJMhB6c1iw5xrMHfNb6oMhaYT6o2ryMSbiLuQS2DXpKTSC/MGVC18xlBcsShqbLI9ig8aZ7rWOm3Q==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:05 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:06 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"/JTQac2xtZgOjtsQHRL3BSngPq2icd2VPrBOiuqrLRrKkS4Pa3odZ2K19emJ6QKmnyxQ/f4aNhf/f0Ar+0TCfw==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:06 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:06 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"jqBwmnvHTiPNrdg/Bw1xSSox+H1mtog8DiWzXpn2g9G4pY783Qzm3KGW9saT9oTqnP2WLTrdY77P6r3/iBlstA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:06 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 29ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:07 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"SaIghVJBj7xY2LMu1ma80wQK+1QMYNSfHmVbSF7BGJt/p97j9IonQzTjnddCnUlwssaVBFALPx3fqlXpTy73/g==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:07 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:08 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"pd4IPSWXsTDB8/ItZkarxD0FScV42Z+q6r+v+NjnJOaT2/Zbg1wZz63I3NTyvV5ni8knlSSydCgrcKFZyQjLgw==", "act"=>"house"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:08 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:08 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"Bwaq5PXEvjBxtWmgFhCIXCu+NeHBkAZVaC2NOigtiIoxA1SCUw8Wzx2OR1mC633/nXJbsZ377dep4oObOcJn7w==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:08 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:09 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"/Etjqqyq8zB69ezx+XC3S2ZK66c81jLOMInYMhaDzLfKTp3MCmFbzxbOwghti0Lo0IaF92C92UzxRtaTB2wj0g==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:09 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:09 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"MuzqMOGMuswPEIoJvxAbjMRFeXuoHQNiXtRYwFQv2aUE6RRWR0cSM2MrpPAr6+4vcokXK/R26OCfG1ZhRcA2wA==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:09 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:10 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"TKxTb/q/1G4nTLQG4hnpkFfKFZi0cyMKdUAyv5MOz9B6qa0JXHR8kUt3mv924hwz4QZ7yOgYyIi0jzweguEgtQ==", "act"=>"house"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:10 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:11 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"xxikhnknMN52TxIpghnSQV/w/+J5wBi+Opj4t9wMpCXxHVrg3+yYIRp0PNAW4ifi6TyRsiWr8zz7V/YWzeNLQA==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:11 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:12 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"ph+JxG/FsCOC0lXqUMMEP904KtvWyuMVGBh/ShKKnp+QGneiyQ4Y3O7pexPEOPGca/REi4qhCJfZ13HrA2Vx+g==", "act"=>"house"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:12 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:13 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"2g28okdeoXgEqZpFwZN7/tb7E8Cl34x9Yah9IR6B4YvsCELE4ZUJh2iStLxVaI5dYDd9kPm0Z/+gZ3OAD24O7g==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:13 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:15 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"+d3RKxNNWo6jaZbw4bTKx9/4hs+KznwWjztiCkA1ugPP2C9NtYbycc9SuAl1Tz9kaTTon9all5RO9GyrUdpVZg==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:15 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 10:58:15 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"KiLGZGFGem6DxaqrSF2RK37f8KdtdK/QMI6127qP/3scJzgCx43Ske/+hFLcpmSIyBOe9zEfRFLxQbt6q2AQHg==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 10:58:15 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:01:21 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1211ms (Views: 1210.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d90e9a075d16728729b6b2c9e766f3121af3b32d51dd9d5bf8d329442c56076a.css?body=1" for 127.0.0.1 at 2016-10-13 11:01:22 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:01:41 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:01:59 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1165ms (Views: 1164.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4cf626e6e90cd1418c26203318fbd25c40b00b755b4d037dc44fbd1726df0725.css?body=1" for 127.0.0.1 at 2016-10-13 11:02:00 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:02:22 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:02:24 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:02:51 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:03:24 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:04:09 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1140ms (Views: 1139.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-514964266e7aba6d8cac7e0267d6bccfd6109a67a6883a19c45ce17ff5145b2e.css?body=1" for 127.0.0.1 at 2016-10-13 11:04:10 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:04:46 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1231ms (Views: 1230.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c7f7a03be13a854cfd9b0c38545ed5d0e652152f6c6e93a2dab9f5ee1b7b61c7.css?body=1" for 127.0.0.1 at 2016-10-13 11:04:47 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:05:21 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1249ms (Views: 1248.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:05:58 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-212975a78c46c429499fd064ae1e3f9d22959166325e345bfdc35e183e5dec50.css?body=1" for 127.0.0.1 at 2016-10-13 11:05:58 -0500
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:11:03 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:11:07 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"R1Y4p0KVx91aLhQPLsGkFZdYl5sUed7I37ObvnRGtY1xU8bB5F5vIjYVOva6OlG2IZT5y0gSNUoefJUfZala6A==", "act"=>"farm"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:11:07 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:11:12 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"LdzrAgNqk7KDEXW+VccUNyRBR6m8wudTBHfsH/cCW0sb2RVkpaE7Te8qW0fBPOGUko0p+eCpDNHFuOK+5u20Lg==", "act"=>"cave"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:11:12 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:12:36 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/billy/coding_dojo/ruby-oct-2016/Billy_Fournier/Rails/Controllers/NinjaGold/app/views/rpgs/index.html.erb:50: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/billy/coding_dojo/ruby-oct-2016/Billy_Fournier/Rails/Controllers/NinjaGold/app/views/rpgs/index.html.erb:52: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/rpgs/index.html.erb:50: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/rpgs/index.html.erb:52: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.6ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.0ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.4ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:12:56 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `msg' for #<Hash:0x007f18ec217cd8>):
+    42:     <div class="col-sm-12 text-box">
+    43:       <% if session['activity'] %>
+    44:         <% session['activity'].each do |activity| %>
+    45:           <%= activity.msg %>
+    46:           <% end %>
+    47:           <% end %>    
+    48:     </div>
+  app/views/rpgs/index.html.erb:45:in `block in _app_views_rpgs_index_html_erb__1094515744476609413_69872508775800'
+  app/views/rpgs/index.html.erb:44:in `each'
+  app/views/rpgs/index.html.erb:44:in `_app_views_rpgs_index_html_erb__1094515744476609413_69872508775800'
+
+
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.3ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:13:12 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:13:29 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:13:39 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:41 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:43 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"2/vRbw+xc3uF9Ih/cWQyJVizHLnF4p/YuBQTrGJ8riXt/i8JqXrbhOnPpobln8eG7n9y6ZmJdFp52x0Nc5NBQA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:44 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:44 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"Is1ERQh7j7QOAMKM612Yx5HVRIC7RG6Q+NuNnTVbjbUUyLojrrAnS2I77HV/pm1kJxkq0OcvhRI5FIM8JLRi0A==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:44 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:45 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"rAA1kbM1XdekMlSE8cY89V8NdX+1WE1q/sbR4QdH8FmaBcv3Ff71KMgJen1lPclW6cEbL+kzpug/Cd9AFqgfPA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:45 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:46 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"qaMkyj5lc3Bx8L2TJgyLnTCU1EdtRePXtrFeegXm8wmfptqsmK7bjx3Lk2qy934+hli6FzEuCFV3flDbFAkcbA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:46 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:46 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"lSfpfkTKZkPODVHkYiQV6uboYK6q2aN1OrgjKyoYI8ejIhcY4gHOvKI2fx323+BJUCQO/vaySPf7dy2KO/fMog==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:46 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:47 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"b14ziDzLW3KPpo93ztOBReYSSSFqji8TMLMwlDShof5ZW83umgDzjeOdoY5aKHTmUN4ncTblxJHxfD41JU5Omw==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:47 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:47 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"bZSSk3bsyBdyiOCiGjb+nx0jKW7bAm08LabzkuhpKrlbkWz10Cdg6B6zzluOzQs8q+9HPodphr7saf0z+YbF3A==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:47 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:47 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"QnNNWl/wRU9JWUAMnJZIAM2WwXxM3kS6kd6ssZ6qsH90drM8+TvtsCVibvUIbb2je1qvLBC1rzhQEaIQj0VfGg==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:47 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:48 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"jZw5d4ivWB42VQZ7CPjzqlymh+pw+RHFk9IwdGDqzsu7mccRLmTw4VpuKIKcAwYJ6mrpuiyS+kdSHT7VcQUhrg==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:48 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:48 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"ekFDPeqZXBjUDD+2eJRpulhOqrcddo22rLgCTKHFY5ZMRL1bTFL057g3EU/sb5wZ7oLE50EdZjRtdwztsCqM8w==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:48 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:48 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"h0/MTlm6229ixvJB/EXSwChkJWaLW7DgqkWiwzjkMK2xSjIo/3FzkA793LhovidjnqhLNtcwW2JriqxiKQvfyA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:48 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:14:49 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"3j8K3KixHLor3J9wSXwVo7C+lwv6C//Ar6lBl7h8kMboOvS6Dnq0RUfnsYndh+AABnL5W6ZgFEJuZk82qZN/ow==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:14:49 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:15:30 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"rVFnLUQygcmrEVibaeK25iy69NndHE5b500mRy1ZGBmbVJlL4vkpNscqdmL9GUNFmnaaiYF3pdkmgijmPLb3fA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:15:30 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:15:31 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"GO8uVaY1kw2zfkxQIwsOAcSevhEKWuJ5AAiUDpkDtKUu6tAzAP478t9FYqm38PuiclLQQVYxCfvBx5qviOxbwA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:15:31 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:15:31 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"0IB0E9QmzbfXetOThUCKJsMpQFB7ZtowMoWhXxyxytTmhYp1cu1lSLtB/WoRu3+FdeUuACcNMbLzSq/+DV4lsQ==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:15:31 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:15:32 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"h5kUggYXs3CpiJ6GPpbEMn/CIHsBplcvOt0xv97lyWSxnOrkoNwbj8WzsH+qbTGRyQ5OK13NvK37Ej8ezwomAQ==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:15:32 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:15:32 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"OxPdL7UPgcrWDH4OAPTkvLEj8m3yZkN7hSU3eJf+vc8NFiNJE8QpNbo3UPeUDxEfB++cPa4NqPlE6jnZhhFSqg==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:15:32 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:15:32 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"ZMPdGwrq8h1dsRLrwskBB6xpXTcoL146rPnzsMRGewJSxiN9rCFa4jGKPBJWMvSkGqUzZ3REtbhtNv0R1amUZw==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:15:32 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/rpgs/find" for 127.0.0.1 at 2016-10-13 11:15:33 -0500
+Processing by RpgsController#find as HTML
+  Parameters: {"authenticity_token"=>"YLlu+sqbRKirMhHxvrhI7kmiKsCdguj2C+IiFUekqH1WvJCcbFDsV8cJPwgqQ71N/25EkMHpA3TKLSy0VktHGA==", "act"=>"casino"}
+Redirected to http://localhost:3000/rpgs
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:15:33 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:16:08 -0500
+
+SyntaxError (/home/billy/coding_dojo/ruby-oct-2016/Billy_Fournier/Rails/Controllers/NinjaGold/app/controllers/rpgs_controller.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ',' or ';' or '\n'
+    when 'farm' gold = rand(10..20)
+                    ^
+/home/billy/coding_dojo/ruby-oct-2016/Billy_Fournier/Rails/Controllers/NinjaGold/app/controllers/rpgs_controller.rb:10: syntax error, unexpected keyword_when, expecting keyword_end
+    when 'cave'
+        ^
+/home/billy/coding_dojo/ruby-oct-2016/Billy_Fournier/Rails/Controllers/NinjaGold/app/controllers/rpgs_controller.rb:12: syntax error, unexpected keyword_when, expecting keyword_end
+    when 'house'
+        ^
+/home/billy/coding_dojo/ruby-oct-2016/Billy_Fournier/Rails/Controllers/NinjaGold/app/controllers/rpgs_controller.rb:14: syntax error, unexpected keyword_when, expecting keyword_end
+    when 'casino'
+        ^
+/home/billy/coding_dojo/ruby-oct-2016/Billy_Fournier/Rails/Controllers/NinjaGold/app/controllers/rpgs_controller.rb:29: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/rpgs_controller.rb:9: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ',' or ';' or '\n'
+  app/controllers/rpgs_controller.rb:10: syntax error, unexpected keyword_when, expecting keyword_end
+  app/controllers/rpgs_controller.rb:12: syntax error, unexpected keyword_when, expecting keyword_end
+  app/controllers/rpgs_controller.rb:14: syntax error, unexpected keyword_when, expecting keyword_end
+  app/controllers/rpgs_controller.rb:29: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.7ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/billy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.6ms)
+
+
+Started GET "/rpgs" for 127.0.0.1 at 2016-10-13 11:16:15 -0500
+Processing by RpgsController#index as HTML
+  Rendered rpgs/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)

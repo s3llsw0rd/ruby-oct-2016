@@ -1,0 +1,14 @@
+<%= form_for @product do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name , :value => Faker::Commerce.product_name %><br />
+
+  <%= f.label :description %>:
+  <%= f.text_field :description, :value => Faker::Lorem.sentence %><br />
+
+  <%= f.label   :price %>:
+  <%= f.text_field :price, :value => Faker::Commerce.price %><br />
+
+  <%= f.select :category_id, Category.all.collect { |p| [ p.name, p.id ] }, include_blank: true %><br />
+  <%= f.submit %>
+<% end %>
+<a href="/">Back</a>
