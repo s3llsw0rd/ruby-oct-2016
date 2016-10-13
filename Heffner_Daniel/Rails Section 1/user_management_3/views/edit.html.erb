@@ -1,0 +1,43 @@
+<h1>Edit User</h1>
+<%= form_for @user, url: {action: 'update'} do |f| %>
+	<% if @user.errors.any? %>
+		<div>
+			<h3><%= pluralize(@user.errors.count, "error") %></h3>
+			<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div>
+		<%= f.label :first_name %>
+		<%= f.text_field :first_name %>
+	</div>
+	<div>
+		<%= f.label :last_name %>
+		<%= f.text_field :last_name %>
+	</div>
+	<div>
+		<%= f.label :email_address %>
+		<%= f.email_field :email_address %>
+	</div>
+	<div>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</div>
+	<div>
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+	</div>
+	<div>
+		<%= f.submit "Update User" %>
+	</div>
+<% end %>
+
+<p>
+	<a href="/users/<%= @user.id %>">Show</a>
+	 | 
+	<a href="/users">Home</a>
+</p>
+
