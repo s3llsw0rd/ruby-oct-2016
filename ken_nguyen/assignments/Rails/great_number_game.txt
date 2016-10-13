@@ -1,0 +1,107 @@
+#great number game
+
+rails new great_number_game
+cd great_number_game
+rails g controller Main index
+
+## routes.rb
+	Rails.application.routes.draw do
+	  get 'main/index' => 'main#index', as: :index
+	  root 'main#index'
+
+	  post 'main/guess' => 'main#guess', as: :guess
+	  post 'main/reset' => 'main#reset', as: :reset
+	end
+
+## main_controller.rb
+	class MainController < ApplicationController
+	  def index
+	  	session[:guess] || session[:guess] = rand(101).to_i
+	  	# result = { :status => 'something' }
+	  	# render 'index', result: result  if you wanted to pass a variable through a render or redirect_to as params
+	  end
+
+	  def guess
+	  	params[:guess] = params[:guess].to_i
+
+	  	if params[:guess] > session[:guess]
+	  		flash[:msg] = 'too high'
+	  	elsif params[:guess] < session[:guess]
+	  		flash[:msg] = 'too low'
+	  	elsif params[:guess] == session[:guess]
+	  		flash[:msg] = "#{session[:guess]} was the number!"
+	  	end
+
+	  	redirect_to action: 'index'   #, result: result 
+	  end
+
+	  def reset
+	  	session[:guess] = nil
+	  	redirect_to index_path 
+	  end
+	end
+
+## index.html.erb
+	<h1>Welcome to the Great Number Game!</h1>
+	<p>I am thinking of a number between 1 and 100</p>
+	<p>Take a guess!</p>
+
+
+	<% if flash[:msg] %>
+		<% if flash[:msg] == 'too high' %>
+			<div id='high' class='wrong'>
+				<p class='msg'><%= flash[:msg] %></p>
+			</div>
+		<% elsif flash[:msg] == 'too low' %>
+			<div id='low' class='wrong'>
+				<p class='msg'><%= flash[:msg] %></p>
+			</div>
+		<% else %>
+			<div id='correct' class='right'>
+				<p class='msg'><%= flash[:msg] %></p>
+				<%= button_to 'Play again!', reset_path, :method => 'POST' %>
+			</div>
+		<% end %>
+	<% end %>
+
+
+	<div class='<%= flash[:msg] == nil ? 'show' : (flash[:msg] == 'too high' || flash[:msg] == 'too low') ? 'show' : 'hidden' %>' >
+		<form action="<%= guess_path %>" method="POST">
+			<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
+			<label for='guess'></label>
+			<input type='text' name='guess' id='guess'>
+			<input type='submit' value='submit'>
+		</form>
+	</div>
+
+## main.scss
+	.wrong {
+		width: 300px;
+		height: 100px;
+		background-color: red;
+		text-align: center;
+		color: white;
+	}
+
+	.right {
+		width: 300px;
+		height: 100px;
+		background-color: green;
+		text-align: center;
+		color: white;
+	}
+
+	.msg {
+		position: relative;
+		top: 50%;
+		transform: translateY(-60%);
+		display:inline-block;
+	}
+
+	.show {
+		display: block;
+	}
+
+	.hidden {
+		display: none;
+	}
