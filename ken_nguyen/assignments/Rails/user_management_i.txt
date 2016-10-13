@@ -1,0 +1,59 @@
+#user management i
+
+rails new user_management_i
+
+cd user_management_i
+
+#in Gemfile
+	gem 'hirb'
+	gem 'rails-footnotes', '>=4.0.0', '<5'
+	gem 'faker'
+
+bundle install
+rails generate rails_footnotes:install
+
+rails g model User first_name:string last_name:string email_address:string password:string
+
+rake db:migrate
+
+rails g controller Users index
+
+rails c
+	30.times { User.create(first_name:Faker::Pokemon.name, last_name:Faker::Pokemon.name, email_address:Faker::Internet.email, password:Faker::Lorem.word)}
+
+## routes.rb
+	Rails.application.routes.draw do
+	  get 'users/index'
+	  root 'users#index'
+	end
+
+## users_controller.rb
+	class UsersController < ApplicationController
+	  def index
+	  	@users = User.all
+	  end
+	end
+
+## index.html.erb
+	<h1>Listing Users</h1>
+	<div id='usersDiv'>
+		<table>
+			<thead>
+				<tr>
+					<th>First name</th>
+					<th>Last name</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @users.each do |user| %>
+					<tr>
+						<td><%= user.first_name %></td>
+						<td><%= user.last_name %></td>
+						<td><%= user.email_address %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
