@@ -1,0 +1,29 @@
+#time display assignment
+
+rails new time_display
+cd time_display
+vim Gemfile
+	gem 'rails-footnotes', '>=4.0.0', '<5'
+bundle install
+rails generate rails_footnotes:install
+rails g controller Times main
+
+##routes.rb
+	Rails.application.routes.draw do
+
+	  root 'times#main'
+
+	end
+
+##times_controller.rb
+	class TimesController < ApplicationController
+	  def main
+	  	@date = Time.now.strftime("%b %d, %Y")
+	  	@time = Time.now.strftime("%I:%M %p")
+	  end
+	end
+
+##main.html.erb
+	<h1>The current date and time</h1>
+	<p><%= @date %></p>
+	<p><%= @time %></p>
