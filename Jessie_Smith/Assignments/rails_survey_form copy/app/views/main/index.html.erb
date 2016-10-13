@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="/" method="POST">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		<p>Your Name: <input type="text" name='user[name]'></p>
+		<p>Dojo Location: <input type="text" name='user[location]'></p>
+		<p>Favorite Language: <input type="text" name='user[language]'></p>
+		<p>Comment: <input type="text" name='user[comment]'></p>
+		<p><input type="submit" value="Submit!">
+	</form>
+</body>
+</html>
