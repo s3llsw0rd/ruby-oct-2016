@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-sm-1">Your gold:</div>
+  <div class="col-sm-2" style='border: solid 1px black'> <%= session[:gold] %> </div>
+</div>
+<br>
+<div class="row">
+  <form action="/rpgs/find" method='post'>
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <div class="col-md-3 ">
+      <div class="col-sm-12 box text-center">
+        <h1>Farm</h1>
+        <p>(earns 10-20 gold/s)</p>
+        <button class='btn btn-default' name='act' value='farm'>Find Gold</button>
+      </div>
+    </div>
+    <div class="col-md-3 ">
+      <div class="col-sm-12 box text-center">
+        <h1>Cave</h1>
+        <p>(earns 5-10 gold/s)</p>
+        <button class='btn btn-default'  name='act' value='cave'>Find Gold</button>
+      </div>
+    </div>
+    <div class="col-md-3 ">
+      <div class="col-sm-12 box text-center">
+        <h1>House</h1>
+        <p>(earns 2-5 gold/s)</p>
+        <button type='submit' class='btn btn-default' name='act' value='house'>Find Gold</button>
+      </div>
+    </div>
+    <div class="col-md-3 ">
+      <div class="col-sm-12 box text-center">
+        <h1>Casino</h1>
+        <p>(earns/takes 0-50 gold/s)</p>
+        <button class='btn btn-default' name='act' value='casino'>Find Gold</button>
+      </div>
+    </div>
+  </form>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-sm-12 text-box">
+      <% if session['activity'] %>
+        <% session['activity'].each do |activity| %>
+          <p style="color: <%= activity['result'] %> " ><%= activity['msg'] %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
