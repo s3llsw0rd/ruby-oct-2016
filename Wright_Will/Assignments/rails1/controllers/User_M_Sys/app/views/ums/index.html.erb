@@ -14,6 +14,7 @@
                     <th>First name</th>
                     <th>Last name</th>
                     <th>Email</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -22,11 +23,23 @@
                         <td><%=user.first_name%></td>
                         <td><%=user.last_name%></td>
                         <td><%=user.email_address%></td>
+                        <td>
+
+                            <a class="nav-link bdr-r" href="<%=show_user_path(user.id)%>">Show</a>
+                            <a class="nav-link bdr-r" href="<%=edit_user_path(user.id)%>">Edit</a>
+                            <form action="<%=delete_user_path(user.id)%>" method="post" class="link">
+                                <input type="hidden" name="id" value="<%=user.id%>">
+                                <input type="submit" name="submit" value="Destroy" class="nav-link">
+                                <input type="hidden" name="_method" value="delete">
+                                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                            </form>
+
+                        </td>
                       </tr>
                     <% end %>
                 </tbody>
             </table>
-            <a href="/users/new">New User</a>
+            <a href="<%=new_user_path%>">New User</a>
         </div>
     </body>
 </html>

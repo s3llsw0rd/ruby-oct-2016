@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>show user</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                    <h4><b>First Name:</b></h4>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                    <h4><%= @user.first_name %></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                    <h4><b>Last Name:</b></h4>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                    <h4><%= @user.last_name %></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                    <h4><b>Email:</b></h4>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                    <h4><%= @user.email_address %></h4>
+                </div>
+            </div>
+
+
+
+
+            <!-- <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                    <h4><b>First Name:</b></h4>
+                    <h4><b>Last Name:</b></h4>
+                    <h4><b>Email:</b></h4>
+                </div>
+                <div class="">
+                    <h4><%= @user.first_name %></h4>
+                    <h4><%= @user.last_name %></h4>
+                    <h4><%= @user.email_address %></h4>
+                </div>
+            </div> -->
+
+
+            <a class="nav-link bdr-r" href="<%=users_path%>">Back</a>
+            <a class="nav-link " href="<%=edit_user_path(@user.id)%>">Edit</a>
+        </div>
+
+    </body>
+</html>
