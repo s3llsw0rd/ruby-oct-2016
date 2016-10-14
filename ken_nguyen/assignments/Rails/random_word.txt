@@ -1,0 +1,38 @@
+#random word generator assignment
+
+rails new random_word
+cd random_word
+rails g controller Words index calculate
+
+## routes.rb
+	Rails.application.routes.draw do
+	  get 'words/index' => 'words#index'
+
+	  get 'words/calculate' => 'words#index'
+	  post 'words/calculate' => 'words#calculate', as: :calculate
+
+	  root 'words#index'
+
+	end
+
+##words_controller.rb
+	class WordsController < ApplicationController
+	  def index
+	  	session[:count] || session[:count] = 0
+	  end
+
+	  def calculate
+	  	session[:random] = (1..14).map { rand(2)==0?rand(10):(((rand(2)==1?65:97)+rand(26)).chr) }.join
+	  	session[:count] += 1
+	  	redirect_to :action => 'index'
+	  end
+	end
+
+##index.html.erb
+	<h1>Random Word (attempt #<%= session[:count] %>)</h1>
+	<form action='<%= calculate_path %>' method='POST'>
+		<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+		<label for='random'></label>
+		<input type='text' id='random' name='word[word]' value='<%= session[:random] %>' disabled>
+		<input type='submit' value='Generate'>
+	</form>
