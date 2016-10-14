@@ -1,0 +1,22 @@
+<p>Name: <%= @product[:name]%></p>
+<p>Description: <%= @product[:description]%></p>
+<p>Price: <%= @product[:pricing]%></p>
+<p>Category: <%= @product.category.name%></p>
+
+<a href="<%= edit_product_path(@product) %>">Edit</a>
+<a href="/">Go back</a>
+
+<div id="comment">
+	<form action="<%= comments_path %>" method="post">
+		<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+		<label>Comment: <textarea name="comment[text]"></textarea></label>
+		<input type="hidden" name="comment[product]" value=<%=@product[:id]%>>
+		<input type="submit" value="Submit">
+	</form>
+	<% if @comments%>
+		<% @comments.each do |comment| %>
+		<p><%= "#{comment.text} - #{comment.created_at}" %></p>
+		<% end %>
+	<% end %>
+	
+</div>

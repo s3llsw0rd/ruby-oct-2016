@@ -1,0 +1,17 @@
+<h1>New Product</h1>
+
+
+<form action="<%= products_path %>" method="post">
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+	<label>Name: <input type="select" name="product[name]"></label>	
+	<label>Category: <select name="product[category]">
+		<% @categories.each do |i|%>
+		<option value="<%= i[:id]%>"><%= i[:name]%></option>
+		<%end%>
+	</select></label>
+	<label>Description: <input type="text" name="product[description]"></label>
+	<label>Price: <input type="number" name="product[pricing]"></label>
+	<input type="submit" value = "Create" >
+</form>
+
+ <a href="<%= products_path %>">Back</a>

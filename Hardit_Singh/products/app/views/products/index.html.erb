@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Products</title>
+</head>
+<body>
+	<h1>Listing products</h1>
+
+	<table class='table'>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Price</th>
+			<th>Category</th>
+			<th>Action</th>
+		</tr>
+		<% @products.each do |i|%>
+			<tr>
+				<td><%=i[:name]%></td>
+				<td><%=i[:description]%></td>
+				<td><%=i[:pricing]%></td>
+				<td><%=i.category.try(:name)%></td>
+				<td>
+					<a href="<%= product_path(i) %>"> Show </a> |
+					<a href="<%= edit_product_path(i) %>"> Edit </a> |
+					<a href="<%= product_path(i) %>" data-method='delete'> Destroy</a>
+				</td>
+			</tr>
+		<%end%>
+		</table>
+
+	<a href="<%= new_product_path %>"> New Product</a>
+	
+</body>
+</html>
+

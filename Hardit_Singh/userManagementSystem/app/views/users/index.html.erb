@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Listing Users</h1>
+
+	<table class='table'>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Action</th>
+					</tr>
+					<% @users.each do |i|%>
+					<tr>
+						<td><%=i[:firstName]%></td>
+						<td><%=i[:lastName]%></td>
+						<td><%=i[:email]%></td>
+						<td>
+							<a href="/users/<%=i[:id]%>"> Show </a> |
+							<a href="/users/<%=i[:id]%>/edit"> Edit </a> |
+							<a href="/users/<%=i[:id]%>/destroy/"> Destroy </a>
+						</td>
+					</tr>
+					<%end%>
+		</table>
+
+	<a href="/users/new">New User</a>
+	
+</body>
+</html>
+

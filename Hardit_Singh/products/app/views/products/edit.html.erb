@@ -1,0 +1,18 @@
+<h1>Editing Product</h1>
+
+<form action="<%= product_path(@product) %>" method="post">
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+	<input type="hidden" name="_method" value='patch'>
+	<label>Name: <input type="text" name="product[name]" value="<%=@product[:name]%>"></label>
+	<label>Category: <select name="product[category]">
+		<% @categories.each do |i|%>
+		<option value="<%= i[:id]%>"><%= i[:name]%></option>
+		<%end%>
+		<option selected value="<%=@product.category.try(:id)%>" > <%=@product.category.try(:name)%></option>
+	</select></label>
+	<label>Description: <input type="text" name="product[description]"  value="<%=@product[:description]%>"></label>
+	<label>Price: <input type="number" name="product[pricing]" value="<%=@product[:pricing]%>"></label>
+	<input type="submit" value = "Update" >
+</form>
+<a href="/products/<%= @product[:id]%>">Show</a>
+ <a href="/">Back</a>

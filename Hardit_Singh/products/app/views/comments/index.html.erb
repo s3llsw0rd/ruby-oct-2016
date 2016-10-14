@@ -1,0 +1,16 @@
+
+<table class='table'>
+	<tr>
+		<th>Comments</th>
+		<th>Products</th>
+	</tr>
+	<% @comments.each do |comment|%>
+		<tr>
+			<td><%= comment.text %></td>
+			<td><%= comment.product.name%></td>
+		</td>
+	</tr>
+	<%end%>
+</table>
+
+<a href="<%= products_path %>">Back</a>
