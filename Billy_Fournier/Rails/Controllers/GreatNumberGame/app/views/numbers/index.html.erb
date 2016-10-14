@@ -1,0 +1,37 @@
+<!-- <h1>Welcome to the Great Numbers Game!</h1>
+<h3>I am thinking of a number between 1 - 100</h3>
+<h3>Take a guess</h3>
+
+<form action="/guess" method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="text" name='guess' >
+  <button>Submit</button>
+</form> -->
+<h1>Welcome to the Great Numbers Game!</h1>
+<h3>I am thinking of a number between 1 - 100</h3>
+<h3>Take a guess</h3>
+<% if flash[:guess] %>
+  <% if flash[:guess]['error'] %>
+
+    <form action="/guess" method='post'>
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <input type="text" name='guess' >
+      <button>Submit</button>
+    </form>
+    <div class="notice"><%= flash[:guess]['msg'] %></div>
+
+  <% else %>
+      <form action="/replay">
+      <p><%= flash[:guess]['msg'] %></p>
+      <button>Play Again</button>
+      </form>
+  <% end %>
+
+<% else %>
+
+  <form action="/guess" method='post'>
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <input type="text" name='guess' >
+    <button>Submit</button>
+  </form>
+<% end %>

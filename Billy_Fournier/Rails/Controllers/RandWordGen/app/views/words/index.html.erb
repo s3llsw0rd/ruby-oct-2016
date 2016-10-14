@@ -1,0 +1,13 @@
+<h5>Random Word (attempt # )</h5>
+<br>
+<h3><%= session[:num] %></h3>
+
+<%= params[:num]   %>
+<!-- <%= num if local_assigns[:num].present?%> -->
+<!-- <%= try{:num}%> -->
+
+
+
+<form action="/words/generate">
+<button >Generate</button>
+</form>

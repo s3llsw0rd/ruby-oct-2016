@@ -1,0 +1,10 @@
+
+<div class="row" style='border:solid 1px black; background:lightgreen'>
+  Thanks for submitting this form! You have submitted this form <%= session[:count] %> times now.
+</div>
+<h1>Submitted Information: </h1>
+
+<p>Name: <%= session[:dojo]['name'] %></p>
+<p>Location: <%= session[:dojo]['location'] %></p>
+<p>Language: <%= session[:dojo]['language'] %></p>
+<p>Comment: <%= session[:dojo]['comment'] %></p>
