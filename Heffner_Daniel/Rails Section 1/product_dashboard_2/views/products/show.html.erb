@@ -1,0 +1,36 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<td><%= @product.name %></td>
+	</tr>
+	<tr>
+		<th>Description</th>
+		<td><%= @product.description %></td>
+	</tr>
+	<tr>
+		<th>Category</th>
+		<td><%= @product.category.name %></td>
+	</tr>
+	<tr>
+		<th>Price</th>
+		<td><%= number_to_currency(@product.price) %></td>
+	</tr>
+</table>
+<p>
+	<a href="/products/<%= @product.id %>/edit">Edit</a>
+	 | 
+	<a href="/products">Home</a>
+</p>
+<%= simple_form_for @comment do |f| %>
+	<%= f.input :product , as: :hidden, input_html: { value: @product.id } %>
+	<%= f.input :comment %>
+	<%= f.button :submit %>
+<% end %>
+<table>
+	<% @product.comments.each do |comment| %>
+		<tr>
+			<td><%= comment.comment %></td>
+			<td><%= comment.created_at.strftime("%D") %></td>
+		</tr>
+	<% end %>
+</table>
