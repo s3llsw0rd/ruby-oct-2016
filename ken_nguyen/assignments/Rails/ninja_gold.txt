@@ -1,0 +1,114 @@
+#ninja gold 
+
+rails new ninja_gold
+cd ninja_gold
+
+#in Gemfile
+	gem 'rails-footnotes', '>=4.0.0', '<5'
+
+bundle install
+rails generate rails_footnotes:install
+
+rails g controller Rpg index
+
+## routes.rb
+	Rails.application.routes.draw do
+	  get 'rpg/index'
+	  root 'rpg#index'
+
+	  post 'rpg/calculate' => 'rpg#calculate', as: :calculate
+	end
+
+## rpg_controller.rb
+	class RpgController < ApplicationController
+	  def index
+	  	session[:gold] || session[:gold] = 0
+	  	session[:activity] || session[:activity] = []
+	  end
+
+	  def calculate
+
+	  	if params[:building] == 'farm'
+	  		gold = rand(10...20).to_i
+	  		session[:gold] += gold
+	  		session[:activity] << ["Earn #{gold} from the farm!",'win']
+	  	elsif params[:building] == 'cave'
+	  		gold = rand(5...10).to_i
+	  		session[:gold] += gold
+	  		session[:activity] << ["Earn #{gold} from the cave!",'win']
+	  	elsif params[:building] == 'house'
+	  		gold = rand(2...5).to_i
+	  		session[:gold] += gold
+	  		session[:activity] << ["Earn #{gold} from the house!",'win']
+	  	elsif params[:building] == 'casino'
+	  		gold = rand(-50...50).to_i
+	  		session[:gold] += gold
+	  		gold >= 0 ? session[:activity] << ["Earn #{gold} from the casino!",'win'] : session[:activity] << ["Lost #{gold} from the casino!", 'loss']
+	  	end
+
+	  	redirect_to action: 'index'
+	  end
+	end
+
+
+## index.html.erb
+	<h1>Welcome Shikamaru - time to get some gold - or whatever.</h1>
+	<div class='container'>
+		<div id='myGold'>
+			<form>
+				<label for='showGold'>Your Gold: 
+					<input type='text' id='showGold' name='miPlata' value='<%= session[:gold] %>' disabled>
+				</label>
+			</form>
+		</div>
+
+		<div id='buildings'>
+			<div id='farm' class='buildingDiv'>
+				<h3>Farm</h3>
+				<p>(earns 10-20 golds)</p>
+				<%= button_to 'Find Gold!', calculate_path, method: :post, params: { building: 'farm' } %>
+			</div>
+
+			<div id='cave' class='buildingDiv'>
+				<h3>Cave</h3>
+				<p>(earns 5-10 golds)</p>
+				<%= button_to 'Find Gold!', calculate_path, method: :post, params: { building: 'cave' } %>
+			</div>
+
+			<div id='house' class='buildingDiv'>
+				<h3>House</h3>
+				<p>(earns 2-5 golds)</p>
+				<%= button_to 'Find Gold!', calculate_path, method: :post, params: { building: 'house' } %>
+			</div>
+
+			<div id='casino' class='buildingDiv'>
+				<h3>Casino</h3>
+				<p>(earns/takes 0-50 golds)</p>
+				<%= button_to 'Find Gold!', calculate_path, method: :post, params: { building: 'casino' } %>
+			</div>
+		</div>
+
+		<div id='activities'>
+			<h4>Activities</h4>
+			<div id='showActivities'>
+				<% session[:activity].reverse.each do |activity| %>
+					<p class='<%= activity[1] %>'><%= activity[0] %></p>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+
+## rpg.scss
+	.win{
+		color: green;
+	}
+
+	.loss{
+		color: red;
+	}
+
+	#showActivities {
+		overflow-y: auto;
+		height: 300px;
+	}
