@@ -1,0 +1,31 @@
+// Place all the styles related to the ums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.back{
+    display:block;
+    margin-left: 15px;
+    margin-top:15px;
+}
+.link{
+    display: inline;
+}
+.bdr-r{
+    border-right: solid black 1px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+form input[type="submit"]{
+    display:inline;
+    background: none;
+    border: none;
+    color: #428bca;
+    // text-decoration: underline;
+    cursor: pointer;
+}
+form input[type="submit"]:hover{
+    text-decoration: underline;
+    color:black;
+}
+table{
+    border:solid gray 1px;
+}
