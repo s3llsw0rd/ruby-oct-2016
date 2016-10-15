@@ -1,0 +1,95 @@
+#user management ii
+
+##routes.rb
+	Rails.application.routes.draw do
+	  get 'users/index'
+	  root 'users#index'
+	  get 'users/new' => 'users#new', as: :new
+	  post '/users' => 'users#create'
+	end
+
+##users_controller.rb
+	class UsersController < ApplicationController
+	  before_action :get_all, only: [:index]
+
+	  def index
+	  end
+
+	  def new
+	  	@user = User.new
+	  end
+
+	  def create
+	  	@user = User.new(user_params)
+	  	if @user.save
+	  		flash[:result] = "Success! New user has been added"
+	  		redirect_to root_path
+	  	else
+	  		render :new
+	  	end
+	  end
+
+	  private
+	  	def get_all
+	  		@users = User.all
+	  	end
+	  	def user_params
+	  		params.require(:user).permit(:first_name, :last_name, :email_address, :password)
+	  	end
+	end
+
+##user.rb
+	class User < ActiveRecord::Base
+		validates :first_name, :last_name, :email_address, :password, presence: true
+	end
+
+##index.html.erb
+	<h1>Listing Users</h1>
+	<div id='usersDiv'>
+		<% if flash[:result] %>
+			<p><%= flash[:result] %></p>
+		<% end %>
+		<table>
+			<thead>
+				<tr>
+					<th>First name</th>
+					<th>Last name</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @users.each do |user| %>
+					<tr>
+						<td><%= user.first_name %></td>
+						<td><%= user.last_name %></td>
+						<td><%= user.email_address %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<%= link_to 'New User', new_path %>
+	</div>
+
+##new.html.erb
+	<h1>New User</h1>
+	<% if @user.errors %>
+		<ul>
+			<% @user.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<form action='/users' method='POST'>
+		<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'
+		<label for='first_name'>First name </label>
+		<input type='text' id='first_name' name='user[first_name]' >
+		<label for='last_name'>Last name </label>
+		<input type='text' id='last_name' name='user[last_name]' >
+		<label for='email'>Email </label>
+		<input type='text' id='email' name='user[email_address]' >
+		<label for='password'>Password </label>
+		<input type='password' id='password' name='user[password]'>
+		<input type='submit' value='Create'>
+	</form>
+	<%= link_to 'Back', root_path %>
