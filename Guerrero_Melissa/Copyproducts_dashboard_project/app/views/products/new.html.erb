@@ -1,0 +1,19 @@
+<h1>New product</h1>
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+  <p><%= error %></p>
+  <% end %>
+<% end %>
+<form action="<%=products_path%>" method="POST">
+<input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token"/>
+ <p>Name:<input type="text" name="product[name]"></p>
+ <p>Description:<input type="text" name="product[description]"></p>
+ <p>Price:<input type="number" name="product[price]"></p>
+ <select name="product[category]" id="Category">
+    <% @categories.each do |category| %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+ </select>
+ <p><input type="submit" value="Create"></p>
+ </form>
+ <p><a href="<%=products_path%>">Back</a></p>
