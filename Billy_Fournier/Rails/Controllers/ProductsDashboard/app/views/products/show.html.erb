@@ -1,0 +1,17 @@
+<h3>Name: <%= @product['name'] %></h3>
+<h3>Description: <%= @product['description'] %></h3>
+<h3>Price: $<%= @product['price'] %></h3>
+<h3>Category: <%= @product.category.name %></h3>
+<h3><a href="/products/<%= @product['id'] %>/edit">Edit</a> | <a href="/">Back</a></h3>
+
+<h2>Comment:</h2>
+<form action="/comments/<%= @product['id']%>" method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="textarea" name='comment[c_text]' value='<%= Faker::ChuckNorris.fact %>'>
+  <button class='btn btn-default'>Submit</button>
+</form>
+<div>
+  <% @comments.each do |comment| %>
+    <p><%= comment.inspect %></p>
+  <% end %>
+</div>

@@ -1,0 +1,26 @@
+<div class="row">
+  <h1>Listing Users</h1>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user['first_name'] %></td>
+        <td><%= user['last_name'] %></td>
+        <td><%= user['email'] %></td>
+        <td><a href="/users/<%= user['id']%>">Show</a> | <a href="/users/<%= user['id']%>/edit">Edit</a> | <a href="/users/<%= user['id']%>" data-method="delete">Destroy</a></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <form action="/users/new">
+    <button class='btn btn-link'>New User</button>
+  </form>
+</div>
