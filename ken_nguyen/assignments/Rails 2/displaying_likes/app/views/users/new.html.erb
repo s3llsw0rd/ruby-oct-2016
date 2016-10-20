@@ -1,0 +1,13 @@
+<h1>Register a new account<h1>
+<form action='/users' method='POST'>
+  <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
+  <label for='Email'>Email: </label>
+  <input type='text' name='users[email]' id='Email'>
+  <label for='Name'>Name: </label>
+  <input type='text' name='users[name]' id='Name'>
+  <label for='Password'>Password: </label>
+  <input type='password' name='users[password]' id='Password'>
+  <label for='Password Confirmation'>Password Confirmation: </label>
+  <input type='password' name='users[password_confirmation]' id='Password Confirmation'>
+  <input type='submit' value='Join'>
+</form>
