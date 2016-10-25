@@ -1,0 +1,17 @@
+<div class="row header">
+	<div class="one-half column">
+		<h1>Notes</h1>
+	</div>
+	<div class="one-half column">
+		<div class="card text-center">
+			<%= form_for @note, remote: true do |f| %>
+				<%= f.text_field :title, :id => "new_title" %>
+				<%= f.submit :value => "New Note", :class => "button-primary" %>
+			<% end %>
+			<div id="errors"></div>
+		</div>
+	</div>
+</div>
+<div class="row" id="notes">
+	<%= render @notes %>
+</div>

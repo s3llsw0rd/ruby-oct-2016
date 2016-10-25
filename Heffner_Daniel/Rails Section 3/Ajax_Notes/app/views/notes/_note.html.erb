@@ -1,0 +1,10 @@
+<div class="row">
+<div class="twelve column card">
+	<h4><%= note.title %></h4>
+	<%= form_for note, remote: true do |f| %>
+		<%= f.hidden_field :title, :value => note.title %>
+		<%= f.text_area :description, :rows => 6, :class => "u-full-width" %>
+	<% end %>
+	<%= link_to "Delete", note_path(note.id), method: :delete, :remote => true, :class => "delete_note button" %>
+</div>
+</div>
