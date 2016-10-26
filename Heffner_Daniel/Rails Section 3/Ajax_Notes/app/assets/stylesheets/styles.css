@@ -1,0 +1,31 @@
+.edit_note #note_description {
+	resize: none;
+	height: 12em;
+}
+
+.delete_note {
+	color: red !important;
+	border-color: red !important;
+}
+
+.card {
+	padding: 1em;
+	border: 1px solid gray;
+	border-radius: 1em;
+}
+
+.text-center {
+	text-align: center;
+}
+
+form, input {
+	margin: 0.5rem !important;
+}
+
+.row {
+	margin: 2rem 0 2rem 0;
+}
+
+textarea {
+	transition: color 0.3s;
+}

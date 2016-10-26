@@ -1,0 +1,5 @@
+$('.edit_note').on('ajax:success', function(){
+	$(this).children('textarea').css("color", "green");
+	var self = $(this);
+	setTimeout(function(){ $(self).children('textarea').css("color", "black"); }, 500);
+})
