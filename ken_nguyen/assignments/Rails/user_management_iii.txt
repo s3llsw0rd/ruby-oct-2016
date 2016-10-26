@@ -1,0 +1,182 @@
+#user management iii
+
+
+##routes.rb
+	Rails.application.routes.draw do
+	  get 'users/index'
+	  root 'users#index'
+	  get 'users/new' => 'users#new', as: :new
+	  post '/users' => 'users#create'
+
+	  get '/users/:id' => 'users#show', as: :show
+	  get '/users/:id/edit' => 'users#edit', as: :edit
+
+	  patch '/users/:id' => 'users#update', as: :update
+	  delete '/users/:id' => 'users#destroy', as: :destroy
+	end
+
+
+##users_controller.rb
+	class UsersController < ApplicationController
+	  before_action :get_all, only: [:index]
+	  before_action :get_user, only: [:show, :edit, :update, :destroy]
+
+	  def index
+	  end
+
+	  def new
+	  	@user = User.new
+	  end
+
+	  def create
+	  	@user = User.new(user_params)
+	  	if @user.save
+	  		flash[:result] = "Success! New user has been added"
+	  		redirect_to root_path
+	  	else
+	  		render :new
+	  	end
+	  end
+
+	  def show
+	  end
+
+	  def edit
+	  end
+
+	  def update
+	  	if @user.update(user_params)
+	  		flash[:result] = "Success! #{@user.first_name} was successfully updated"
+	  		redirect_to root_path
+	  	else
+	  		render :edit
+	  	end
+	  end
+
+	  def destroy
+	  	if @user.destroy
+	  		flash[:result] = "Some friend you are.. #{@user.first_name} was destroyed x_x "
+	  		redirect_to root_path
+	  	else
+	  		flash[:result] = "oops... something f!#@d up"
+	  		redirect_to root_path
+	  	end
+	  end
+
+	  private
+	  	def get_all
+	  		@users = User.all
+	  	end
+
+	  	def get_user
+	  		@user = User.find(params[:id])
+	  	end
+
+	  	def user_params
+	  		params.require(:user).permit(:first_name, :last_name, :email_address, :password)
+	  	end
+	end
+
+
+##user.rb model
+	class User < ActiveRecord::Base
+		validates :first_name, :last_name, :email_address, :password, presence: true
+	end
+
+
+##index.html.erb
+	<h1>Listing Users</h1>
+	<div id='usersDiv'>
+		<% if flash[:result] %>
+			<p><%= flash[:result] %></p>
+		<% end %>
+		<table>
+			<thead>
+				<tr>
+					<th>First name</th>
+					<th>Last name</th>
+					<th>Email</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @users.each do |user| %>
+					<tr>
+						<td><%= user.first_name %></td>
+						<td><%= user.last_name %></td>
+						<td><%= user.email_address %></td>
+						<td>
+							<%= link_to 'Show', show_path(user.id) %> | <%= link_to 'Edit', edit_path(user.id) %> | <%= button_to 'Destroy', destroy_path(user.id), data: {confirm: 'Are you sure?'}, method: :delete %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<%= link_to 'New User', new_path %>
+	</div>
+
+
+##new.html.erb
+	<h1>New User</h1>
+	<% if @user.errors %>
+		<ul>
+			<% @user.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<form action='/users' method='POST'>
+		<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
+		<label for='first_name'>First name </label>
+		<input type='text' id='first_name' name='user[first_name]' >
+		<label for='last_name'>Last name </label>
+		<input type='text' id='last_name' name='user[last_name]' >
+		<label for='email'>Email </label>
+		<input type='text' id='email' name='user[email_address]' >
+		<label for='password'>Password </label>
+		<input type='password' id='password' name='user[password]'>
+		<input type='submit' value='Create'>
+	</form>
+	<%= link_to 'Back', root_path %>
+
+
+##edit.html.erb
+	<h1>Editing User</h1>
+	<% if @user.errors %>
+		<ul>
+			<% @user.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<form action='/users/<%= @user.id %>' method='POST'>
+		<input type='hidden' name='_method' value='patch' >
+		<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
+		<label for='first_name'>First name </label>
+		<input type='text' id='first_name' name='user[first_name]' value='<%= @user.first_name %>'>
+		<label for='last_name'>Last name </label>
+		<input type='text' id='last_name' name='user[last_name]' value='<%= @user.last_name %>'>
+		<label for='email'>Email </label>
+		<input type='text' id='email' name='user[email_address]' value='<%= @user.email_address %>'>
+		<label for='password'>Password </label>
+		<input type='password' id='password' name='user[password]' value='<%= @user.password %>'>
+		<input type='submit' value='Update'>
+	</form>
+	<p><%= link_to 'Show', show_path(@user.id) %> | <%= link_to 'Back', root_path %></p>
+
+
+##show.html.erb
+	<h1>User #<%= @user.id %></h1>
+	<div>
+		<p>First name: <%= @user.first_name %></p>
+		<p>Last name: <%= @user.last_name %></p>
+		<p>Email: <%= @user.email_address %></p>
+		<p><%= link_to 'Edit', edit_path(@user.id) %> | <%= link_to 'Back', root_path %></p>
+	</div>
+
+
+##users.scss
+	.button_to {
+		display: inline-block;
+	}
