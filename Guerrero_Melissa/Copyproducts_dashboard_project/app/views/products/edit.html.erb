@@ -1,0 +1,23 @@
+<h1>Editing product</h1>
+
+<form action="<%=product_path(@edit_product)%>" method="POST">
+<input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token"/>
+<input type="hidden" name="_method" value="PATCH">
+<select name="product[category]" id="Category">
+    <% @categories.each do |category| %>
+      <% if(category.name == @edit_product.category.name) %>
+      <option selected="select" value="<%= category.id %>"><%= category.name %></option>
+      <% else %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+      <% end %>
+    <% end %>
+  </select>
+ <p>Name:<input type="text" name="product[name]" placeholder="<%=(@edit_product)[:name]%>"></p>
+ <p>Description:<input type="text" name="product[description]" placeholder="<%=(@edit_product)[:description]%>"></p>
+ <p>Price:<input type="number" name="product[price]" placeholder="<%=(@edit_product)[:price]%>"></p>
+ <p>Category:<input type="text" name="product.category[name]" placeholder="<%=@edit_product.category[:name]%>"></p>
+ <p><input type="submit" value="Update"></p>
+ </form>
+
+ <p><a href="<%=product_path(@edit_product)%>">Show</a> | <a href="<%=products_path%>">Back</a></p>
+

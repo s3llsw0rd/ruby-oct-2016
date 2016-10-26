@@ -1,0 +1,26 @@
+<h3>Name: <%=@show_product[:name]%> </h3>
+<h3>Description: <%=@show_product[:description]%> </h3>
+<h3>Price: <%=@show_product[:price]%> </h3>
+<h3>Category: <%= @show_product.category.name %> </h3>
+
+<h2>Create a new Comment</h2>
+<form action="/comments" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="comment[product_id]" value="<%= @show_product.id %>">
+  <label for="Comment">Comment</label>
+  <input type="text" name="comment[comment]" id="Comment">
+  <input type="submit" value="Create">
+</form>
+
+<h2>Comments for this product</h2>
+<% @comments.each do |comment| %>
+  <p><%= comment.comment %></p>
+  <form action="/comments/<%= comment.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="product_id" value="<%= @show_product.id %>">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" value="Destroy">
+  </form>
+<% end %>
+
+<p><a href="<%=edit_product_path%>">Edit</a> | <a href="<%=products_path%>">Back</a></p>
