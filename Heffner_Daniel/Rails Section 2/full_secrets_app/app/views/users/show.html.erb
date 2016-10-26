@@ -1,0 +1,32 @@
+<h1>User Profile</h1>
+<p><%= @user['name'] %></p>
+<a href="<%= edit_user_path %>">Edit Profile</a>
+
+<% if flash[:errors] %>
+	<ul>
+		<% flash[:errors].each do |err| %>
+			<li><%= err %></li>
+		<% end %> 
+	</ul>
+<% end %>
+
+<h2>New Secret</h2>
+<%= form_for @secret do |f| %>
+
+	<%= f.label :content, "New Secret"%>
+	<%= f.text_field :content %>
+
+	<%= f.submit %>
+
+<% end %>
+
+<h2>My Secrets</h2>
+<% @user.secrets.each do |secret| %>
+<p>
+	<%= secret['content'] %> 
+	(<%= secret.likes.count %> likes)
+	<%= form_for secret, method: :delete do |f| %>
+		<%= f.submit :value => "Delete" %>
+	<% end %>
+</p>
+<% end %>

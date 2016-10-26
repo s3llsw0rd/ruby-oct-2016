@@ -1,0 +1,27 @@
+<h1>New User</h1>
+
+<% if flash[:errors] %>
+	<ul>
+		<% flash[:errors].each do |err| %>
+			<li><%= err %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @user do |f| %>
+
+	<%= f.label :email %>
+	<%= f.email_field :email %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+
+	<%= f.label :password_confirmation, "Password Confirmation" %>
+	<%= f.password_field :password_confirmation %>
+
+	<%= f.submit :value => "Join" %>
+
+<% end %>
