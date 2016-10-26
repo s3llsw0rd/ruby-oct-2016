@@ -1,0 +1,190 @@
+#products dashboard ii -- comments
+
+rails g model Comment comment:text product:references
+rails g controller Comments index
+
+rake db:migrate
+
+## routes.db
+
+	Rails.application.routes.draw do
+	  root 'products#index'
+	  resources :products
+
+	  get 'comments' => 'comments#index'
+	  post 'comments' => 'comments#create'
+	end
+
+## comments_controller.rb
+	class CommentsController < ApplicationController
+	  before_action :get_all_comments, only: [:index]
+
+	  def index
+	  end
+
+	  def create
+	    @comment = Comment.new(comment_params)
+	    if @comment.save
+	      flash[:message] = 'Success! Added new comment'
+	      redirect_to controller: 'products', action: 'show', id: (comment_params[:product_id])
+	    else
+	      flash[:message] = @comment.errors.full_messages[0]
+	      redirect_to controller: 'products', action: 'show', id: (comment_params[:product_id])
+	    end
+	  end
+
+	  private
+	  def get_all_comments
+	    @comments = Comment.all
+	  end
+
+	  def comment_params
+	    params.require(:comment).permit(:comment, :product_id)
+	  end
+	end
+
+
+## comment.rb model
+	class Comment < ActiveRecord::Base
+	  belongs_to :product
+	  
+	  validates :comment, presence: true
+	end
+
+
+## index.html.erb for comments
+	<h1>All Comments</h1>
+	<div>
+	  <table>
+	    <thead>
+	      <tr>
+	        <th>Comments</th>
+	        <th>Products</th>
+	      </tr>
+	    </thead>
+
+	    <tbody>
+	      <% @comments.each do |c|  %>
+	        <tr>
+	          <td><%= c.comment %></td>
+	          <td><%= c.product.try(:name) %></td>
+	        </tr>
+	      <% end %>
+	    </tbody>
+	  </table>
+	  <p><a href='/'>Back</a></p>
+	</div><!-- container -->
+
+## products_controller.rb
+	class ProductsController < ApplicationController
+	  before_action :get_all_products, only: [:index]
+	  before_action :get_product, only: [:show, :edit, :update, :destroy]
+	  before_action :get_comment_for_product, only: [:show]
+
+	  def index
+	  end
+
+	  def show
+	  end
+
+	  def new
+	    @product = Product.new
+	  end
+
+	  def edit
+	  end
+
+	  def create
+	    @product = Product.new(product_params)
+	    if @product.save
+	      flash[:message] = 'Success! Added a new product'
+	      redirect_to root_path
+	    else
+	      render :new
+	    end
+	  end
+
+	  def update
+	    if @product.update(product_params)
+	      flash[:message] = 'Success! Product was updated'
+	      redirect_to root_path
+	    else
+	      render :edit
+	    end
+	  end
+
+	  def destroy
+	    if @product.destroy
+	      flash[:message] = 'Deleted my products? Sleep with one eye open'
+	      redirect_to root_path
+	    else
+	      flash[:message] = 'Something went wrong, you\'ll never make it as a hacker'
+	      redirect_to root_path
+	    end
+	  end
+
+	  private
+	    def get_all_products
+	      @products = Product.all
+	    end
+
+	    def get_product
+	      @product = Product.find(params[:id])
+	    end
+
+	    def product_params
+	      params.require(:product).permit(:name, :description, :price, :category_id)
+	    end
+
+	    def get_comment_for_product
+	      @product_comments = Product.find(params[:id]).comments
+	    end
+	end
+
+
+## product.rb model
+	class Product < ActiveRecord::Base
+	  belongs_to :category
+	  has_many :comments, dependent: :destroy
+
+	  validates :name, :description, :price, presence: true
+	end
+
+## show.html.erb view
+	<h1>Product #<%= @product.id %> </h1>
+	<div>
+	  <div id='showProductDiv'>
+	    <p><%= @product.name %></p>
+	    <p><%= @product.description %></p>
+	    <p>$<%= @product.price %></p>
+	    <p><%= @product.category.try(:name) %></p>
+	    <p><a href='/products/<%= @product.id %>/edit'>Edit</a> | <a href='/'>Back</a></p>
+	  </div><!-- showProductDiv -->
+	  <div id='leaveCommentDiv'>
+	    <% if flash[:message] %>
+	        <%= flash[:message] %>
+	    <% end %>
+	    <form action='/comments' method='POST'>
+	      <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
+	      <input type='hidden' name='comment[product_id]' value='<%= @product.id %>' >
+	      <label for='comment'>Comment: </label>
+	      <textarea id='comment' name='comment[comment]'></textarea>
+	      <input type='submit' value='Submit'>
+	    </form>
+	    <div id='showProductComments'>
+	      <% if @product_comments %>
+	        <% @product_comments.reverse.each do |c| %>
+	          <p><%= c.comment %> <%= c.created_at.strftime('%m/%d/%y') %></p>
+	        <% end %>
+	      <% end %>
+	    </div>
+	  </div><!-- leaveCommentDiv -->
+	</div><!--container-->
+
+## index.html.erb
+	<div>
+	  <h1 id='indexH1'>Listing Products</h1>
+	  <a href='/comments'>All Comments</a>
+	</div>
+
+	// added this link to link to show all comments "/comments" view
