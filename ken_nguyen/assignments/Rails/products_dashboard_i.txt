@@ -1,0 +1,224 @@
+#products dashboard i
+
+rails new products_dashboard
+cd products_dashboard
+
+vim Gemfile
+	gem 'hirb'
+	gem 'rails-footnotes', '>=4.0.0', '<5'
+	gem 'faker'
+
+bundle install 
+rails generate rails_footnotes:install
+
+rails g model Product name:string description:text price:float
+
+rake db:migrate
+
+rails g controller Products index show new edit
+
+rails g model Category name:string
+rake db:migrate
+
+rails g migration AddCategoryToProducts category:references
+
+	##
+		class AddCategoryToProducts < ActiveRecord::Migration
+		  def change
+		    add_reference :products, :category, index: true, foreign_key: true
+		  end
+		end
+
+
+rake db:migrate
+
+
+## routes.rb
+	Rails.application.routes.draw do
+	  root 'products#index'
+	  resources :products
+	end
+
+## products_controller.rb
+	class ProductsController < ApplicationController
+	  before_action :get_all_products, only: [:index]
+	  before_action :get_product, only: [:show, :edit, :update, :destroy]
+
+	  def index
+	  end
+
+	  def show
+	  end
+
+	  def new
+	    @product = Product.new
+	  end
+
+	  def edit
+	  end
+
+	  def create
+	    @product = Product.new(product_params)
+	    if @product.save
+	      flash[:message] = 'Success! Added a new product'
+	      redirect_to root_path
+	    else
+	      render :new
+	    end
+	  end
+
+	  def update
+	    if @product.update(product_params)
+	      flash[:message] = 'Success! Product was updated'
+	      redirect_to root_path
+	    else
+	      render :edit
+	    end
+	  end
+
+	  def destroy
+	    if @product.destroy
+	      flash[:message] = 'Deleted my products? Sleep with one eye open'
+	      redirect_to root_path
+	    else
+	      flash[:message] = 'Something went wrong, you\'ll never make it as a hacker'
+	      redirect_to root_path
+	    end
+	  end
+
+	  private
+	    def get_all_products
+	      @products = Product.all
+	    end
+
+	    def get_product
+	      @product = Product.find(params[:id])
+	    end
+
+	    def product_params
+	      params.require(:product).permit(:name, :description, :price, :category_id)
+	    end
+	end
+
+## product.rb model
+	class Product < ActiveRecord::Base
+	  belongs_to :category
+
+	  validates :name, :description, :price, presence: true
+	end
+
+## category.rb model
+	class Category < ActiveRecord::Base
+	  has_many :products
+	end
+
+## index.html.erb
+	<h1>Listing Products</h1>
+	<% if flash[:message] %>
+	  <p><%= flash[:message] %></p>
+	<% end %>
+	<div id='allProducts'>
+	  <table>
+	    <thead>
+	      <tr>
+	        <th>Name</th>
+	        <th>Description</th>
+	        <th>Price</th>
+	        <th>Category</th>
+	        <th></th>
+	      </tr>
+	    </thead>
+
+	    <tbody>
+	      <% @products.each do |product| %>
+	        <tr>
+	          <td><%= product.name %></td>
+	          <td><%= product.description %></td>
+	          <td>$<%= product.price %></td>
+	          <td><%= product.category.try(:name) %></td>
+	          <td><a href='products/<%= product.id %>'>Show</a> | <a href='products/<%= product.id %>/edit'>Edit</a> | <form action='products/<%= product.id %>' method='POST' class='deleteButton'><input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'><input type='hidden' name='_method' value='delete'><input type='submit' value='Destroy'></form></td>
+	        </tr>
+	      <% end %>
+	    </tbody>
+	  </table>
+	  <p><a href='products/new'>New Product</a></p>
+	</div><!-- all products container -->
+
+## new.html.erb
+	<h1>New Product</h1>
+	<div>
+	  <% if @product.errors %>
+	    <ul>
+	      <% @product.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	    </ul>
+	  <% end %>
+	  <form action='/products' method='POST'>
+	    <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
+	    <label for='category'>Category: </label>
+	    <select id='category' name='product[category_id]'>
+	      <option value='1'>Electronics</option>
+	      <option value='2'>Household</option>
+	      <option value='3'>Gardening</option>
+	      <option value='4'>Automotive</option>
+	      <option value='5'>Ninjas</option>
+	    </select>
+	    <label for='name'>Name: </label>
+	    <input type='text' name='product[name]' id='name' value='<%= Faker::Pokemon.name %>'>
+	    <label for='description'>Description: </label>
+	    <input type='text' name='product[description]' id='description' value='<%= Faker::Hipster.sentence %>'>
+	    <label for='price'>Price: </label>
+	    <input type='number' name='product[price]' id='price' min='0.0' step='any' value='<%= Faker::Number.decimal(2) %>'>
+	    <input type='submit' value='Create'>
+	  </form>
+	  <p><a href='/'>Back</a></p>
+	</div><!-- container -->
+
+## show.html.erb
+	<h1>Product #<%= @product.id %> </h1>
+	<div>
+	  <p><%= @product.name %></p>
+	  <p><%= @product.description %></p>
+	  <p>$<%= @product.price %></p>
+	  <p><%= @product.category.try(:name) %></p>
+	  <p><a href='/products/<%= @product.id %>/edit'>Edit</a> | <a href='/'>Back</a></p>
+	</div><!--container-->
+
+## edit.html.erb
+	<h1>Edit Product</h1>
+	<div>
+	  <% if @product.errors %>
+	    <ul>
+	      <% @product.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	    </ul>
+	  <% end %>
+	  <form action='/products/<%= @product.id %>' method='POST'>
+	    <input type='hidden' name='_method' value='PATCH'>
+	    <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
+	    <label for='category'>Category: </label>
+	    <select id='category' name='product[category_id]' >
+	      <option value='1'>Electronics</option>
+	      <option value='2'>Household</option>
+	      <option value='3'>Gardening</option>
+	      <option value='4'>Automotive</option>
+	      <option value='5'>Ninjas</option>
+	      <option selected value='<%= @product.category.try(:category_id) %>'><%= @product.category.try(:name) %></option>
+	    </select>
+	    <label for='name'>Name: </label>
+	    <input type='text' name='product[name]' id='name' value='<%= @product.name %>'>
+	    <label for='description'>Description: </label>
+	    <input type='text' name='product[description]' id='description' value='<%= @product.description %>'>
+	    <label for='price'>Price: </label>
+	    <input type='number' name='product[price]' id='price' min='0.0' step='any' value='<%= @product.price %>'>
+	    <input type='submit' value='Update'>
+	  </form>
+	  <p><a href='/products/<%= @product.id  %>'>Show</a> | <a href='/'>Back</a></p>
+	</div><!-- container -->
+
+## product.scss
+	.deleteButton {
+	  display: inline-block;
+	}
