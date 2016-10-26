@@ -1,0 +1,10 @@
+
+  <% if flash[:error] %>
+    <div class="error"><%= flash[:error] %></div>
+  <% end %>
+<p>Name: <%=session[:user]['name']%></p>
+<p>Dojo Location: <%=session[:user]['location']%></p>
+<p>Favorite Language: <%=session[:user]['language']%></p>
+<p>Comment: <%=session[:user]['comment']%></p>
+
+<%= link_to "Go Back", "/"  %>

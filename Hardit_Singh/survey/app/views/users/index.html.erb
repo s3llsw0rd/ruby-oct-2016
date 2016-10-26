@@ -1,0 +1,18 @@
+<form action="/users/create" method="post">
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+	<label>Your Name: <input type="text" name="user[name]"></label>
+
+	<label>Dojo Location: <select name="user[location]" id="loc">
+                <option value="dallas">Dallas</option>
+                <option value="seattle">Seattle</option>
+                <option value="sanJose">San Jose</option>
+            </select></label>
+            <label>Language:<select name="user[language]" id="lang">
+                <option value="python">Python</option>
+                <option value="cSharp">C#</option>
+                <option value="javascript">JavaScript</option>
+            </select></label>
+
+	<label>Comment (optional): <input type="text" name="user[comment]"></label>
+	<label> <input type="submit"></label>
+</form>

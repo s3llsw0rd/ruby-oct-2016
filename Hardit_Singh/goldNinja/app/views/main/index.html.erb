@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Ninja Money</title>
+</head>
+<body>
+<div id="wrapper">
+	<p>Your Gold:<span><%=session[:gold]%></span></p>
+   	<div id = 'mid'>
+		<div class = "places">
+			<h1>Farm</h1>
+			<p>(earns 10-20 golds)</p>
+			<form action="/process_money" method="post">
+				<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="place" value="farm">
+				<input type="submit" name="gold" value = "Find Gold!" >
+			</form>
+		</div>
+		<div class = "places">
+			<h1>Cave</h1>
+			<p>(earns 5-10 golds)</p>
+			<form action="/process_money" method="post">
+				<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="place" value="cave">
+				<input type="submit" name="gold" value = "Find Gold!" >
+			</form>
+		</div>
+		<div class = "places">
+			<h1>House</h1>
+			<p>(earns 2-5 golds)</p>
+			<form action="/process_money" method="post">
+				<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="place" value= "house">
+				<input type="submit" name="gold" value = "Find Gold!" >
+			</form>
+		</div>
+   		<div class = "places">
+			<h1>Casino</h1>
+			<p>(earns/take 0-50 golds)</p>
+			<form action="/process_money" method="post">
+				<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="place" value="casino">
+				<input type="submit" name="gold" value = "Find Gold!" >
+			</form>
+		</div>   	   	
+   	</div>
+	<p>Activites:</p>
+	<div id="out">		
+		<div id = "activities">
+			<% session[:messages].each do |i| %>
+				<% if i.include? 'lost'%>
+					<p class='red'><%= i %></p>
+				<% else %>
+					<p><%= i %></p>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>    
+
+</body>
+</html>
