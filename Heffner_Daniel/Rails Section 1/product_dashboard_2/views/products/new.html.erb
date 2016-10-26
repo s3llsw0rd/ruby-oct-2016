@@ -1,0 +1,29 @@
+<h1>New Product</h1>
+<% if @product.errors.any? %>
+	<div>
+		<h3><%= pluralize(@product.errors.count, "Error") %></h3>
+		<ul>
+			<% @product.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+<% if @product.name or @product.description or @product.price %>
+	<%= simple_form_for @product do |f| %>
+		<%= f.input :category, collection: @categories, selected: @product.category.id %>
+		<%= f.input :name, as: :string, input_html: { value: @product.name } %>
+		<%= f.input :description, as: :text, input_html: { value: @product.description } %>
+		<%= f.input :price, as: :float, input_html: { value: @product.price } %>
+		<%= f.button :submit %>
+	<% end %>
+<% else %>
+	<%= simple_form_for @product do |f| %>
+		<%= f.input :category, collection: @categories, selected: rand(1..5) %>
+		<%= f.input :name, as: :string, input_html: { value: Faker::Hipster.word } %>
+		<%= f.input :description, as: :text, input_html: { value: Faker::Hipster.sentence } %>
+		<%= f.input :price, as: :float, input_html: { value: Faker::Commerce.price } %>
+		<%= f.button :submit %>
+	<% end %>
+<% end %>
+<p><a href="/products">Home</a></p>
