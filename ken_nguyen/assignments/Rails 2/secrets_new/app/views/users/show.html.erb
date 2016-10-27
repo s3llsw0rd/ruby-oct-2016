@@ -1,0 +1,32 @@
+<h1><%= @user.name %></h1>
+<a href="/users/<%= @user.id %>/edit">Edit Profile</a>
+<div id='secrets'>
+  <table>
+    <thead>
+      <tr>
+        <th>Secret #</th>
+        <th>Your Secret</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @secrets %>
+        <% for i in (0..(@secrets.size-1)) do %>
+          <tr>
+            <td><%= i+1 %></td>
+            <td><%= @secrets[i].content %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div><!-- secrets -->
+<div id='newSecret'>
+  <h3>Add a new secret</h3>
+  <form>
+    <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
+    <input type='hidden' name='secrets[user_id]' value='<%= @user.id %>'>
+    <label for='New Secret'></label>
+    <textarea id='New Secret' name='secrets[content]'></textarea>
+    <input type='submit' value='Shhh'>
+  </form>
+</div><!-- new Secret -->
