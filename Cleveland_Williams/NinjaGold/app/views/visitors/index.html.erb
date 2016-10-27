@@ -1,0 +1,110 @@
+<!-- Page Content -->
+<div class="container">
+
+
+
+<hr>
+
+<!-- Title -->
+<div class="row">
+  <div class="col-lg-12">
+    <h4>Your Gold</h4>
+    <div id="gold"><%= @gold %></div>
+  </div>
+</div>
+<!-- /.row -->
+
+<!-- Page Features -->
+<div class="row text-center">
+
+  <div class="col-md-3 col-sm-6 hero-feature">
+    <div class="thumbnail">
+      <%= image_tag("coin.gif", :alt => "coin") %>
+      <div class="caption">
+        <h3>Farm</h3>
+        <p>(earns 10-20 golds)</p>
+        <form action="/visitors/farm" method="POST">
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" name="action" value="Find Gold">
+          <p>
+            <input type="submit" value="Find Gold" class="btn btn-primary"/>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-6 hero-feature">
+    <div class="thumbnail">
+      <%= image_tag("coin.gif", :alt => "coin") %>
+      <div class="caption">
+        <h3>Cave</h3>
+        <p>(earns 5-10 golds)</p>
+        <form action="/visitors/cave" method="POST">
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" name="action" value="Find Gold">
+          <p>
+            <input type="submit" value="Find Gold" class="btn btn-primary"/>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-6 hero-feature">
+    <div class="thumbnail">
+      <%= image_tag("coin.gif", :alt => "coin") %>
+      <div class="caption">
+        <h3>House</h3>
+        <p>(earns 2-5 golds)</p>
+        <form action="/visitors/house" method="POST">
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" name="action" value="Find Gold">
+        <p>
+          <input type="submit" value="Find Gold" class="btn btn-primary"/>
+        </p>
+      </div>
+    </form>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-6 hero-feature">
+    <div class="thumbnail">
+      <%= image_tag("coin.gif", :alt => "coin") %>
+      <div class="caption">
+        <h3>Casino</h3>
+        <p>(earns 0-50 golds)</p>
+        <form action="/visitors/casino" method="POST">
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" name="action" value="Find Gold">
+        <p>
+          <input type="submit" value="Find Gold" class="btn btn-primary"/>
+        </p>
+      </div>
+    </form>
+    </div>
+  </div>
+
+</div>
+<!-- /.row -->
+
+<hr>
+
+<!-- Footer -->
+<footer>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="form-group">
+        <label for="comment">Activities:</label>
+        <div class="form-control" rows="5" id="comment">
+          <% if @log.length > 1%>
+            <%= @log.html_safe%>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<!-- /.container -->
