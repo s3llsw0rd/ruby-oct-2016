@@ -1,0 +1,30 @@
+
+<% if flash[:errors] %>
+	<% if flash[:errors]['message'] %>
+		<p><%= flash[:errors]['message'] %></p>
+	<% end %>
+<% end %>
+
+<%= form_for @ninja do |f| %>
+
+	<%= f.label :name, "Ninja Name" %>
+	<%= f.text_field :name %>
+
+	<% if flash[:errors] %>
+		<% if flash[:errors]['name'] %>
+			<p><%= flash[:errors]['name'] %></p>
+		<% end %>
+	<% end %>
+
+	<%= f.label :description, "Ninja Description" %>
+	<%= f.text_area :description %>
+
+	<% if flash[:errors] %>
+		<% if flash[:errors]['description'] %>
+			<p><%= flash[:errors]['description'] %></p>
+		<% end %>
+	<% end %>
+
+	<%= f.submit :value => "Submit" %>
+
+<% end %>

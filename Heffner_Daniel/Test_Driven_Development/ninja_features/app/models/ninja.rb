@@ -1,0 +1,5 @@
+class Ninja < ApplicationRecord
+
+	validates :name, :description, presence: true
+
+end
